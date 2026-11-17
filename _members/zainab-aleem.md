@@ -1,6 +1,6 @@
 ---
 name: Zainab Aleem
-image: images/people/placeholder.svg
+image: images/people/zainab-aleem.jpg
 role: undergrad
 group: alum
 description: Chemers Neustein SURF Summer Student, 2026

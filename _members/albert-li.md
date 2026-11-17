@@ -1,6 +1,6 @@
 ---
 name: Albert Li
-image: images/people/placeholder.svg
+image: images/people/albert-li.jpg
 role: undergrad
 group: alum
 description: Chemers Neustein SURF Summer Student, 2025

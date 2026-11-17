@@ -1,6 +1,6 @@
 ---
 name: Alexandra Durt
-image: images/people/placeholder.svg
+image: images/people/alexandra-durt.jpg
 role: undergrad
 group: alum
 description: Chemers Neustein SURF Summer Student, 2026
