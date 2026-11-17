@@ -10,14 +10,6 @@ Other projects are motivated by problems that arise in climate models, which nee
 Because we are focused on microbial metabolism in natural settings, we also pursue basic questions in microbiology, systems biology, and ecology.
 If you have an interest in quantitative thinking, environmental systems, and/or microbial physiology and metabolism, [drop us a line]({{ "/join/" | relative_url }}).
 
-<div class="tags research-areas" aria-label="Rockefeller research areas">
-  <a class="tag" href="https://www.rockefeller.edu/research/research-areas-and-laboratories/#biochemistry-biophysics-chemical-biology-and-structural-biology">Biochemistry, Biophysics, Chemical Biology, and Structural Biology</a>
-  <a class="tag" href="https://www.rockefeller.edu/research/research-areas-and-laboratories/#genetics-and-genomics">Genetics and Genomics</a>
-  <a class="tag" href="https://www.rockefeller.edu/research/research-areas-and-laboratories/#immunology-virology-and-microbiology">Immunology, Virology, and Microbiology</a>
-  <a class="tag" href="https://www.rockefeller.edu/research/research-areas-and-laboratories/#organismal-biology-and-evolution">Organismal Biology and Evolution</a>
-  <a class="tag" href="https://www.rockefeller.edu/research/research-areas-and-laboratories/#physical-mathematical-and-computational-biology">Physical, Mathematical, and Computational Biology</a>
-</div>
-
 {% include section.html %}
 
 {% capture content %}

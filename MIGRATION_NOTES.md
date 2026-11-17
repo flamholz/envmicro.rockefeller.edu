@@ -7,7 +7,7 @@ Content was pulled from the old pages on 2026-11-17.
 
 | Old page / content | New location |
 |---|---|
-| Home: "About the lab", research-area tags, photo carousel | `index.md` (`/`): intro, tags linking to the RU research areas, captioned 6-photo gallery, buttons to every section |
+| Home: "About the lab", research-area tags, photo carousel | `index.md` (`/`): intro, captioned 6-photo gallery, buttons to every section. The RU research-area tags were dropped (imposed by the RU page design, not lab content) |
 | People: PI + 5 members | `_members/*.md`, shown on `team/index.md` (`/team/`); each person also gets a page at `/members/<name>/` |
 | People: Collaborators and Friends | "Collaborators and friends" list on `/team/` (text only, no member pages) |
 | People: Alums | `_members/*.md` with `group: alum`, shown in the "Alumni" section of `/team/` |
@@ -47,7 +47,7 @@ Top nav: Research · Projects · Team · Resources · Photos · Join · News (or
 6. **Avi's bio.** The old People page had no bio for Avi. `_members/avi-flamholz.md` is written from the facts on his official RU profile (education, positions, awards, programs). Please edit.
 7. **Social links.** Google Scholar (`A7RolPoAAAAJ`) comes from the old site. The ORCID (`0000-0002-9278-5479`) came from an ORCID public search, and the GitHub handle (`flamholz`) is the repo owner. Please verify both. I did not add a YouTube channel, Bluesky or LinkedIn.
 8. **Collaborator affiliations** are verbatim from the old site (e.g. "TATA Bangalore", "WIS").
-9. **Not migrated (RU-wide, not lab content):** the RU sidebar's "Upcoming Events" and RU-wide news teasers, the RU global nav/footer, and the newsletter signup.
+9. **Not migrated (RU-wide, not lab content):** the RU research-area tags, the RU sidebar's "Upcoming Events" and RU-wide news teasers, the RU global nav/footer, and the newsletter signup.
 10. **Member order.** Within the same role, members sort alphabetically by file name, so Eden appears before Sophia (the reverse of the old page).
 11. **External dependencies** (from the template, loaded by visitors' browsers): Google Fonts, Font Awesome (use.fontawesome.com), unpkg (popper, tippy, mark.js) and jsDelivr. If RU web policy requires self-hosting or a Content-Security-Policy, these need attention.
 
