@@ -1,7 +1,7 @@
 ---
 title: Photos
 nav:
-  order: 5
+  order: 6
   tooltip: Lab life in pictures
 ---
 

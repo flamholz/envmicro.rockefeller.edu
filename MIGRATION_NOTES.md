@@ -17,9 +17,10 @@ Content was pulled from the old pages on 2026-11-17.
 | Lab Photos (+ "Building the Lab" sub-gallery) | `photos/index.md` (`/photos/`) |
 | Lab opportunities (home page) | `join/index.md` (`/join/`) |
 | Contact block | Footer on every page: lab name and postal address only (`contact:` in `_config.yaml`). The phone number and email are deliberately not published, except the email on `/join/`, written as "aflamholz at rockefeller dot edu" (no mailto link) to discourage scraping |
+| Tri-I Theory Lunch (was flamholz.github.io/theory-lunch/, added 2026-11-17) | `theory-lunch/index.md` (`/theory-lunch/`), top-level nav link and a button on the home page. Photo reuses `images/photos/tri-i-theory-lunch.jpg` (same image as the Google Photos hotlink). "Write to me" links to the Join page contact. The old GitHub Pages copy should redirect here (e.g. `redirect_to: https://envmicro.rockefeller.edu/theory-lunch/` with jekyll-redirect-from in that repo) |
 | News item (Nov 21, 2024) | `_posts/2024-11-21-new-faculty-member.md`, listed at `/news/` |
 
-Top nav: Research · Projects · Team · Resources · Photos · Join · News (order set by `nav.order` in each page's front matter).
+Top nav: Research · Projects · Team · Resources · Theory Lunch · Photos · Join · News (order set by `nav.order` in each page's front matter).
 
 ## Decisions and deviations from the brief
 

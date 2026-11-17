@@ -63,6 +63,7 @@ If you have an interest in quantitative thinking, environmental systems, and/or 
 {% include button.html link="projects/" text="Projects" icon="fa-solid fa-wrench" %}
 {% include button.html link="team/" text="Team" icon="fa-solid fa-users" %}
 {% include button.html link="resources/" text="Resources" icon="fa-solid fa-toolbox" %}
+{% include button.html link="theory-lunch/" text="Theory Lunch" icon="fa-solid fa-chalkboard-user" %}
 {% include button.html link="photos/" text="Lab photos" icon="fa-solid fa-camera" %}
 {% include button.html link="join/" text="Join us" icon="fa-solid fa-user-plus" %}
 {% include button.html link="news/" text="News" icon="fa-solid fa-newspaper" %}

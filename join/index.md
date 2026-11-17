@@ -1,7 +1,7 @@
 ---
 title: Join
 nav:
-  order: 6
+  order: 7
   tooltip: Openings and how to apply
 ---
 

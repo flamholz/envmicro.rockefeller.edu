@@ -20,7 +20,7 @@ Useful online resources.
 ## NY-area seminars of interest
 
 - [Rockefeller Physics & Biology Seminar](https://www.rockefeller.edu/research/interdisciplinary-centers/center-studies-physics-biology/seminars/) — a weekly seminar at the intersection of physics and biology at Rockefeller University. We are frequent hosts.
-- [Tri-I Theory Lunch](https://flamholz.github.io/theory-lunch/) — a monthly lunchtime chalk talk emphasizing concepts in biology, co-hosted with [Ed Reznik at MSKCC](https://www.mskcc.org/research-areas/labs/ed-reznik). Food is provided.
+- [Tri-I Theory Lunch]({{ "/theory-lunch/" | relative_url }}) — a monthly lunchtime chalk talk emphasizing concepts in biology, co-hosted with [Ed Reznik at MSKCC](https://www.mskcc.org/research-areas/labs/ed-reznik). Food is provided.
 - [CUNY / Princeton Biological Physics Symposia](https://biophysics.princeton.edu/events/biophysics-symposia) — local biological physics symposia hosted by Bill Bialek at the CUNY Graduate Center.
 
 {% include section.html %}
