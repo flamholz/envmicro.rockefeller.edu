@@ -20,6 +20,17 @@ If you have an interest in quantitative thinking, environmental systems, and/or 
 
 {% include section.html %}
 
+## Recent news
+
+{% for post in site.posts limit: 3 %}
+  {% include post-excerpt.html lookup=post.slug %}
+{% endfor %}
+
+{% include button.html link="news/" text="All news" icon="fa-solid fa-arrow-right" flip=true %}
+{:.center}
+
+{% include section.html %}
+
 {% capture content %}
 
 {%
@@ -61,17 +72,6 @@ If you have an interest in quantitative thinking, environmental systems, and/or 
 {% endcapture %}
 
 {% include grid.html style="gallery" content=content %}
-
-{% include section.html %}
-
-## Recent news
-
-{% for post in site.posts limit: 3 %}
-  {% include post-excerpt.html lookup=post.slug %}
-{% endfor %}
-
-{% include button.html link="news/" text="All news" icon="fa-solid fa-arrow-right" flip=true %}
-{:.center}
 
 {% include section.html %}
 
