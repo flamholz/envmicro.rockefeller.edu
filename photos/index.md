@@ -13,6 +13,13 @@ Click a photo to open the full album (Google Photos).
 
 {%
   include figure.html
+  image="images/photos/bear-mountain-hike-2026-10.jpg"
+  link="https://photos.app.goo.gl/dzLTsxUkwwkmqmnAA"
+  caption="Oct. 2026 Lab Hike to Bear Mountain"
+%}
+
+{%
+  include figure.html
   image="images/gallery/nylittle-2026-innisfree-garden.jpg"
   link="https://photos.app.goo.gl/ToQLJfMvV656hQDCA"
   caption="August 2026 NYLittle Retreat w/ McRose and Gowda Labs — Rockefeller Field Center, Millbrook NY"
