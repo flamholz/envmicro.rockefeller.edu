@@ -1,6 +1,7 @@
 # map general type to default/fallback icon, text, etc.
 
 # team member roles
+# (description is the default role label shown under a member's portrait)
 
 principal-investigator:
   icon: fa-solid fa-microscope
@@ -8,11 +9,19 @@ principal-investigator:
 
 postdoc:
   icon: fa-solid fa-glasses
-  description: Postdoctoral Researcher
+  description: Postdoctoral Fellow
 
 phd:
   icon: fa-solid fa-graduation-cap
-  description: PhD Student
+  description: Graduate Student
+
+staff:
+  icon: fa-solid fa-flask
+  description: Research Associate
+
+volunteer:
+  icon: fa-solid fa-hand-holding-heart
+  description: Volunteer
 
 undergrad:
   icon: fa-solid fa-user-graduate
@@ -20,11 +29,7 @@ undergrad:
 
 programmer:
   icon: fa-solid fa-code
-  description: Programmer
-
-mascot:
-  icon: fa-solid fa-dog
-  description: Mascot
+  description: Research Software Engineer
 
 # general
 

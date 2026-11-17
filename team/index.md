@@ -2,34 +2,34 @@
 title: Team
 nav:
   order: 3
-  tooltip: About our team
+  tooltip: People in the lab
 ---
 
 # {% include icon.html icon="fa-solid fa-users" %}Team
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Interested in joining us? See [Join us]({{ "/join/" | relative_url }}).
 
 {% include section.html %}
 
-{% include list.html data="members" component="portrait" filter="role == 'pi'" %}
-{% include list.html data="members" component="portrait" filter="role != 'pi'" %}
+{% include list.html data="members" component="portrait" filter="role == 'principal-investigator' && group != 'alum'" %}
 
-{% include section.html background="images/background.jpg" dark=true %}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+{% include list.html data="members" component="portrait" filter="role == 'postdoc' && group != 'alum'" %}
+{% include list.html data="members" component="portrait" filter="role == 'phd' && group != 'alum'" %}
+{% include list.html data="members" component="portrait" filter="role == 'staff' && group != 'alum'" %}
+{% include list.html data="members" component="portrait" filter="role == 'volunteer' && group != 'alum'" %}
 
 {% include section.html %}
 
-{% capture content %}
+## Collaborators and friends
 
-{% include figure.html image="images/photo.jpg" %}
-{% include figure.html image="images/photo.jpg" %}
-{% include figure.html image="images/photo.jpg" %}
+- [Akshit Goyal](https://www.icts.res.in/people/akshit-goyal), TATA Bangalore
+- [Josh Goldford](https://www.dayhofflabs.com/), Dayhoff Labs
+- [Karna Gowda](https://microbiology.osu.edu/people/gowda.51), Ohio State
+- [Sarah Kostinski](https://skostinski.github.io/), NYU
+- [Yinon Bar-On](https://scholar.google.co.il/citations?user=3iE59GcAAAAJ&hl=en), WIS
 
-{% endcapture %}
+{% include section.html %}
 
-{% include grid.html style="square" content=content %}
+## Alumni
+
+{% include list.html data="members" component="portrait" filter="group == 'alum'" style="small" %}
