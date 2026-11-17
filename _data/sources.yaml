@@ -1,23 +1,56 @@
-- id: doi:10.1371/journal.pcbi.1007128
-  type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  date: 2020-12-4
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
-  buttons:
-    - type: manubot
-      link: https://greenelab.github.io/meta-review/
-    - type: source
-      text: Manuscript Source
-      link: https://github.com/greenelab/meta-review
-    - type: website
-      link: http://manubot.org/
-  tags:
-    - open science
-    - collaboration
-  repo: greenelab/meta-review
+# Papers shown on the Research page.
+# Add a paper by its DOI, then run scripts/build.sh (or `python _cite/cite.py`)
+# to regenerate _data/citations.yaml.
+#
+# The research page shows one list per topic tag:
+#   metabolism    -> Microbial metabolism, physiology & communities
+#   co2-fixation  -> Microbial CO2 fixation & rubisco
+#   environment   -> Environmental analysis
 
-- id: doi:10.1016/j.csbj.2020.05.017
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+# --- Microbial metabolism, physiology & communities ---
 
-- id: doi:10.7554/eLife.32822
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+- id: doi:10.1073/pnas.2404048121
+  tags: [metabolism]
+
+- id: doi:10.1128/msystems.00763-24
+  tags: [metabolism]
+
+- id: doi:10.1073/pnas.2309387120
+  tags: [metabolism]
+
+- id: doi:10.1128/mbio.02076-22
+  tags: [metabolism]
+
+- id: doi:10.1073/pnas.2110787119
+  tags: [metabolism]
+
+# --- Microbial CO2 fixation & rubisco ---
+
+- id: doi:10.1038/s41586-024-08455-0
+  tags: [co2-fixation]
+
+- id: doi:10.1073/pnas.2300466120
+  tags: [co2-fixation]
+
+- id: doi:10.1073/pnas.2210539119
+  tags: [co2-fixation]
+
+- id: doi:10.7554/eLife.59882
+  tags: [co2-fixation]
+
+- id: doi:10.1016/j.cub.2020.01.076
+  tags: [co2-fixation]
+
+- id: doi:10.1021/acs.biochem.9b00237
+  tags: [co2-fixation]
+
+- id: doi:10.1038/s41564-019-0520-8
+  tags: [co2-fixation]
+
+# --- Environmental analysis ---
+
+- id: doi:10.1038/s41587-025-02632-w
+  tags: [environment]
+
+- id: doi:10.1073/pnas.2404329122
+  tags: [environment]
