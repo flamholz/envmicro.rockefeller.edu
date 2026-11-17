@@ -59,7 +59,7 @@ Top nav: Team · Projects · Resources · Publications · Photos · News · Theo
 - [ ] **Alumni photos** (optional). All four use `images/people/placeholder.svg`.
 - [ ] **Julie's headshot** is only 297×344 px on the old site. A higher-resolution photo would look better.
 - [ ] **Favicon** `images/icon.png` is a generated "EM" placeholder. The social share image `images/share.jpg` is cropped from the 2026 group retreat photo.
-- [ ] **Tool cards** use generated text tiles (`images/resources/*.svg`). Swap in screenshots or logos if you prefer.
+- [x] **Tool cards** use each site's own logo, centered on a white 3:2 tile (`images/resources/*.png`). The BioNumbers and eQuilibrator logos come from those sites. The Classic Reactions tile reuses the eQuilibrator mark, which that page uses as its logo, with the name added. The Human Impacts Database has no logo, so its tile is text ("HuIDs", as in its navbar).
 - [ ] Bios for current members are as on the old site. Links (email, ORCID, GitHub, website) can be added under `links:` in each member file.
 
 ## How to…

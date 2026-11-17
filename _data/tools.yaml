@@ -1,8 +1,10 @@
 # Web tools listed on the Resources page (card list).
+# Tiles are 3:2 PNGs (900x600): the site's own logo centered on white.
+# Human Impacts has no logo, so its tile is a text tile in its navbar style.
 
 - title: BioNumbers
   link: https://bionumbers.hms.harvard.edu/search.aspx
-  image: images/resources/bionumbers.svg
+  image: images/resources/bionumbers.png
   description: >-
     A compendium of quantitative values regarding biological molecules, cells,
     and organisms. Ongoing maintenance and curation by the
@@ -11,7 +13,7 @@
 
 - title: eQuilibrator
   link: https://equilibrator.weizmann.ac.il/
-  image: images/resources/equilibrator.svg
+  image: images/resources/equilibrator.png
   description: >-
     An online tool for calculating thermodynamic potentials of biochemical
     reactions using free-text search. Development ongoing with Elad Noor and
@@ -19,7 +21,7 @@
 
 - title: Classic Reactions
   link: http://equilibrator.weizmann.ac.il/static/classic_rxns/classic_reactions/index.html
-  image: images/resources/classic-reactions.svg
+  image: images/resources/classic-reactions.png
   description: >-
     A primer on metabolism from a thermodynamic perspective. Housed on
     eQuilibrator and written with help from Elad Noor, Noam Prywes, Dave Savage
@@ -27,7 +29,7 @@
 
 - title: Human Impacts Database
   link: http://www.anthroponumbers.org/catalog/
-  image: images/resources/human-impacts-database.svg
+  image: images/resources/human-impacts-database.png
   description: >-
     Developed primarily by [Griffin Chure](https://gchure.github.io/) as part
     of the Human Impacts project in
