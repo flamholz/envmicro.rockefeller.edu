@@ -1,16 +1,18 @@
 ---
 title: Theory Lunch
+description: The Tri-Institutional Theory Lunch, a monthly informal lunchtime chalk talk on concepts in biology, co-hosted with the Reznik group at MSKCC.
 nav:
   order: 5
   tooltip: Monthly Tri-I chalk talk on concepts in biology
 ---
 
-# {% include icon.html icon="fa-solid fa-chalkboard-user" %}Theory Lunch
+# {% include icon.html icon="fa-solid fa-chalkboard-user" %}Tri-Institutional Theory Lunch
 
-## Theory Lunch at Rockefeller University
+## Theory Lunch
 
 Research talks are formal and typically focus on data.
-Theory Lunch is an opportunity to discuss *concepts* in biology over an informal lunchtime chalk talk.
+The goal of the Tri-I Theory Lunch is to discuss *concepts* in biology over an informal lunchtime chalk talk.
+Theory Lunch is co-hosted by my group and the group of [Ed Reznik](https://www.mskcc.org/research-areas/labs/ed-reznik) at MSKCC.
 Food is provided.
 
 Come learn how people think in different fields, get to know your colleagues, and potentially uncover resonances with your own research.
@@ -24,7 +26,8 @@ We definitely took inspiration from the [Theory Lunch series](https://sysbio.med
   width="100%"
 %}
 
-If you're in the NYC area and you'd like to present or join an upcoming meeting, please [write to me]({{ "/join/#contact" | relative_url }}).
+Theory Lunch is often (but not always) held in the Physics Seminar Room at Rockefeller (CRC A30).
+If you're in the NYC area and you'd like to join or present at an upcoming meeting, please [write to me]({{ "/join/#contact" | relative_url }}).
 
 {% include section.html %}
 
@@ -32,7 +35,8 @@ If you're in the NYC area and you'd like to present or join an upcoming meeting,
 
 | Date | Speaker | Affiliation | Title |
 |------|---------|-------------|-------|
-| November 20, 2026 | Dr. [Jacob Zavatone-Veth](https://jzv.io/) | Rockefeller University | To be announced |
+| November 20, 2026 | Dr. [Jacob Zavatone-Veth](https://jzv.io/) | Rockefeller University | Learning and identifying computations in recurrent neural networks |
+| December 18, 2026 | Dr. [Stephen Martis](https://stephen-martis.github.io/) | MSKCC | To be announced |
 
 {% include section.html %}
 
