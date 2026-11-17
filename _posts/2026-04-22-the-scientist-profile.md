@@ -3,7 +3,7 @@ title: "The Scientist: A Microbiologist Mines Bacterial Metabolism to Tackle Cli
 tags: news, press
 ---
 
-*The Scientist* profiled Avi Flamholz, from a first career in software engineering to a lab at Rockefeller that uses computational tools and microbial biochemistry to improve climate models and develop new engineering approaches to climate change.
+*The Scientist* featured a profile of Avi discussing his trajectory and focus in science. 
 
 {%
   include button.html
