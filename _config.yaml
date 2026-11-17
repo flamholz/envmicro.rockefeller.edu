@@ -11,15 +11,14 @@ proofer: false
 url: "https://envmicro.rockefeller.edu"
 baseurl: ""
 
-# lab contact details (shown in the footer and on the Join page)
+# lab contact details shown in the footer (address only; phone and email are
+# deliberately not published site-wide; the Join page shows the email in obfuscated form)
 contact:
   name: Avi Flamholz
   address:
     - The Rockefeller University
     - 1230 York Ave
     - New York, NY 10065
-  phone: 212-327-0000
-  phone-link: "+1-212-327-0000"
 
 # site social media and other links (icons in the footer)
 # (no email here on purpose, to keep it out of every page's footer)

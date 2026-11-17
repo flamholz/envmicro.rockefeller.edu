@@ -16,7 +16,7 @@ Content was pulled from the old pages on 2026-11-17.
 | Resources | `resources/index.md` (`/resources/`): tool cards (`_data/tools.yaml`), seminars list, video embeds |
 | Lab Photos (+ "Building the Lab" sub-gallery) | `photos/index.md` (`/photos/`) |
 | Lab opportunities (home page) | `join/index.md` (`/join/`) |
-| Contact block | Footer on every page: address and phone only, from `contact:` in `_config.yaml` (email deliberately left out of the footer). Full contact section, with email, on `/join/` |
+| Contact block | Footer on every page: lab name and postal address only (`contact:` in `_config.yaml`). The phone number and email are deliberately not published, except the email on `/join/`, written as "aflamholz at rockefeller dot edu" (no mailto link) to discourage scraping |
 | News item (Nov 21, 2024) | `_posts/2024-11-21-new-faculty-member.md`, listed at `/news/` |
 
 Top nav: Research · Projects · Team · Resources · Photos · Join · News (order set by `nav.order` in each page's front matter).

@@ -9,7 +9,6 @@ aliases:
   - A. I. Flamholz
   - A. Flamholz
 links:
-  email: aflamholz@rockefeller.edu
   home-page: https://www.rockefeller.edu/our-scientists/heads-of-laboratories/12573-avi-i-flamholz/
   google-scholar: A7RolPoAAAAJ
   orcid: 0000-0002-9278-5479
