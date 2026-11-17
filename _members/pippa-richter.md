@@ -1,5 +1,7 @@
 ---
 name: Pippa Richter
+aliases:
+  - Philippa A. Richter
 image: images/people/pippa-richter.jpg
 role: programmer
 group: alum

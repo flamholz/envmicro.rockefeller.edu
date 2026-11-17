@@ -1,5 +1,6 @@
 ---
 name: Avi I. Flamholz
+citation_name: Avi I. Flamholz
 image: images/people/avi-flamholz.jpg
 role: principal-investigator
 description: Assistant Professor
