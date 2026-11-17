@@ -1,11 +1,11 @@
 ---
-title: Research
+title: Publications
 nav:
-  order: 1
+  order: 4
   tooltip: Publications by topic
 ---
 
-# {% include icon.html icon="fa-solid fa-microscope" %}Research
+# {% include icon.html icon="fa-solid fa-microscope" %}Publications
 
 Recent papers by broad topic.
 See [Google Scholar](https://scholar.google.com/citations?user=A7RolPoAAAAJ&hl=en) for a complete list.

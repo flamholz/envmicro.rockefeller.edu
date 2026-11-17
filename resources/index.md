@@ -1,7 +1,7 @@
 ---
 title: Resources
 nav:
-  order: 4
+  order: 3
   tooltip: Tools, seminars and videos
 ---
 

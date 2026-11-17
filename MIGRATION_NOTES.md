@@ -21,7 +21,7 @@ Content was pulled from the old pages on 2026-11-17.
 | News item (Nov 21, 2024) | `_posts/2024-11-21-new-faculty-member.md`, listed at `/news/` |
 | (new) News items | Welcome posts for James (Feb 1, 2025), Sophia (May 15, 2025), Eden (Sep 15, 2025), Julie (Feb 17, 2026, which also announces her Women & Science Postdoctoral Fellowship, awarded Nov 2025) and Javi (Nov 16, 2026). Text is drawn from the Team bios |
 
-Top nav: Research · Projects · Team · Resources · Theory Lunch · Photos · Join · News (order set by `nav.order` in each page's front matter).
+Top nav: Team · Projects · Resources · Publications · Photos · News · Theory Lunch · Join (order set by `nav.order` in each page's front matter; the home page's Explore buttons follow the same order). The Publications page lives at `/research/` (it was titled "Research" until 2026-11-17; the URL was kept so existing links still work).
 
 ## Decisions and deviations from the brief
 
@@ -31,7 +31,7 @@ Top nav: Research · Projects · Team · Resources · Theory Lunch · Photos · 
 - **Alumni** are member files with `group: alum`, which is LWT's convention. They get a member page with a neutral placeholder portrait (`images/people/placeholder.svg`). The past program is shown as `description` and the current position as `affiliation`.
 - **Photos is its own page.** The old Lab Photos page and the home carousel share only one photo (the 2026 Innisfree Garden shot), so they were not merged. The "Building the Lab" sub-gallery (12 captioned photos) was migrated into `/photos/` rather than linking to the old rockefeller.edu page. The album covers link to the Google Photos albums, as before.
 - **Videos.** LWT has no embed component. Its `jekyll-spaceship` plugin can turn a Markdown image of a YouTube URL into an iframe, but it uses `youtube.com` (not the privacy-enhanced `youtube-nocookie.com` the old site used) and a fixed height. I added a small responsive include, `_includes/embed.html` (styles in `_styles/embed.scss`). Usage: `{% include embed.html youtube="VIDEO_ID" title="…" %}`.
-- **Topic filtering.** Each source has `tags: [metabolism | co2-fixation | environment]`, and the Research page filters with `filter="tags && tags.include?('…')"`. LWT's list adds year subheadings within each topic.
+- **Topic filtering.** Each source has `tags: [metabolism | co2-fixation | environment]`, and the Publications page (`research/index.md`) filters with `filter="tags && tags.include?('…')"`. LWT's list adds year subheadings within each topic.
 - **Citation links** are the shortDOI URLs that Manubot generates (e.g. `https://doi.org/hcsrjj`), which redirect to the full DOI. During the cite step Manubot prints a `403` warning for a PubMed Central ID lookup; it is harmless, because the citations come from DOI metadata.
 - **Template pieces removed.** The demo members, posts and projects; `testbed.md`; the demo `contact/` page (its content now lives in the footer and on `/join/`); the template's ORCID source (`_data/orcid.yaml`, which belonged to someone else); the committed citation cache; `CITATION.cff` and `CHANGELOG.md`; the issue and discussion templates; and **all of the template's GitHub workflows**. Those workflows deploy to GitHub Pages, or exist only to auto-commit `citations.yaml` around that deploy. The new `build.yaml` runs the citation step as part of every build instead.
 - **Small template fixes.** Post tag links pointed at `/blog`, so they now point at `/news/`. The member page's "posts" link was updated the same way. I added a `gallery` grid style (`_styles/gallery.scss`) and footer contact styles.
@@ -87,7 +87,7 @@ When someone leaves, add `group: alum`, a `description:` (their role and years i
 
 ### Add a paper (by DOI)
 
-1. Add an entry to `_data/sources.yaml`, using the topic tag for the Research-page section it belongs in:
+1. Add an entry to `_data/sources.yaml`, using the topic tag for the Publications-page section it belongs in:
    ```yaml
    - id: doi:10.1234/abcd.5678
      tags: [metabolism]   # metabolism | co2-fixation | environment

@@ -2,7 +2,7 @@
 title: Theory Lunch
 description: The Tri-Institutional Theory Lunch, a monthly informal lunchtime chalk talk on concepts in biology, co-hosted with the Reznik group at MSKCC.
 nav:
-  order: 5
+  order: 7
   tooltip: Monthly Tri-I chalk talk on concepts in biology
 ---
 
