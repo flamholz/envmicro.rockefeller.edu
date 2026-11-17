@@ -20,11 +20,10 @@ contact:
     - New York, NY 10065
   phone: 212-327-0000
   phone-link: "+1-212-327-0000"
-  email: aflamholz@rockefeller.edu
 
 # site social media and other links (icons in the footer)
+# (no email here on purpose, to keep it out of every page's footer)
 links:
-  email: aflamholz@rockefeller.edu
   google-scholar: A7RolPoAAAAJ
   orcid: 0000-0002-9278-5479
   github: flamholz

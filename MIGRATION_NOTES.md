@@ -16,7 +16,7 @@ Content was pulled from the old pages on 2026-11-17.
 | Resources | `resources/index.md` (`/resources/`): tool cards (`_data/tools.yaml`), seminars list, video embeds |
 | Lab Photos (+ "Building the Lab" sub-gallery) | `photos/index.md` (`/photos/`) |
 | Lab opportunities (home page) | `join/index.md` (`/join/`) |
-| Contact block | Footer on every page (from `contact:` in `_config.yaml`) and a contact section on `/join/` |
+| Contact block | Footer on every page: address and phone only, from `contact:` in `_config.yaml` (email deliberately left out of the footer). Full contact section, with email, on `/join/` |
 | News item (Nov 21, 2024) | `_posts/2024-11-21-new-faculty-member.md`, listed at `/news/` |
 
 Top nav: Research · Projects · Team · Resources · Photos · Join · News (order set by `nav.order` in each page's front matter).
