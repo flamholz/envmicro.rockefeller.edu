@@ -27,6 +27,13 @@ Click a photo to open the full album (Google Photos).
 
 {%
   include figure.html
+  image="images/photos/krb-holiday-party-2025.jpg"
+  link="https://photos.app.goo.gl/KMHdBJ3HbuDumdt5A"
+  caption="2025 KRB Holiday Party"
+%}
+
+{%
+  include figure.html
   image="images/photos/nylittle-2025-retreat.jpg"
   link="https://photos.app.goo.gl/q6MQtLGuiqjW6cTu9"
   caption="August 2025 NYLittle Retreat w/ Dal Bello and Gowda Labs — Rockefeller Field Center, Millbrook NY"
