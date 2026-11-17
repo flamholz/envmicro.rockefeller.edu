@@ -7,8 +7,6 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-camera" %}Lab Photos
 
-Click a photo to open the full album (Google Photos).
-
 {% capture content %}
 
 {%
