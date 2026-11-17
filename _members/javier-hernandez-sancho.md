@@ -2,6 +2,7 @@
 name: Javi Hernandez Sancho
 image: images/people/javier-hernandez-sancho.jpg
 role: postdoc
+description: Postdoctoral Researcher
 aliases:
   - Javi Hernandez Sancho
   - Javier Miguel Hernández Sancho
