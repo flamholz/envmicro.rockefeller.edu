@@ -1,0 +1,18 @@
+---
+---
+
+// a single, framed photo: narrower than the text column, with a white mat,
+// thin border and soft shadow. usage: wrap a figure.html include in
+// <div class="photo-frame"> ... </div>
+.photo-frame .figure {
+  margin: 30px auto;
+}
+
+.photo-frame .figure-image img {
+  width: min(100%, 640px) !important;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--rounded);
+  box-shadow: 0 6px 20px rgba(12, 26, 48, 0.15);
+}

@@ -18,16 +18,18 @@ Food is provided.
 Come learn how people think in different fields, get to know your colleagues, and potentially uncover resonances with your own research.
 We definitely took inspiration from the [Theory Lunch series](https://sysbio.med.harvard.edu/theorylunch) that Jeremy Gunawardena previously ran at Harvard.
 
+If you're in the NYC area and you'd like to join or present at an upcoming meeting, please [write to me]({{ "/join/#contact" | relative_url }}).
+
+<div class="photo-frame">
 {%
   include figure.html
   image="images/photos/tri-i-theory-lunch.jpg"
   link="https://photos.app.goo.gl/1SUbZJhuX4cQ29L17"
   caption="See more photos in the [Theory Lunch album](https://photos.app.goo.gl/1SUbZJhuX4cQ29L17)."
-  width="100%"
 %}
+</div>
 
 Theory Lunch is often (but not always) held in the Physics Seminar Room at Rockefeller (CRC A30).
-If you're in the NYC area and you'd like to join or present at an upcoming meeting, please [write to me]({{ "/join/#contact" | relative_url }}).
 
 {% include section.html %}
 
