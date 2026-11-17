@@ -31,7 +31,6 @@ Each summer, we host students at the high school and undergraduate level via Roc
 
 We're currently at capacity with no openings available right now.
 We appreciate you thinking of us and encourage you to check back in the future as our needs may change.
-[More info](https://www.rockefeller.edu)
 
 {% include section.html %}
 

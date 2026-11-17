@@ -39,13 +39,13 @@ Top nav: Research · Projects · Team · Resources · Photos · Join · News (or
 
 ## Please review / couldn't fully migrate
 
-1. **2026 NYLittle album link.** On the old Photos page, that item's image linked to `photos.app.goo.gl/ToQLJfMvV656hQDCA`, but its caption linked to the 2025 album (`q6MQtLGuiqjW6cTu9`), which looks like a copy-paste slip. I used `ToQL…` for both. Please confirm.
-2. **"Join our staff → More info"** linked to the rockefeller.edu homepage, probably as a stand-in for a careers page. Kept as is in `join/index.md`.
+1. **2026 NYLittle album link.** On the old Photos page, that item's image linked to `photos.app.goo.gl/ToQLJfMvV656hQDCA`, but its caption linked to the 2025 album (`q6MQtLGuiqjW6cTu9`), which looked like a copy-paste slip. I used `ToQL…` for both. ✅ Confirmed correct (2026-11-17).
+2. **"Join our staff → More info"** linked to the rockefeller.edu homepage. ✅ Removed at your request (2026-11-17).
 3. **Ed Reznik link.** `reznik-lab.webflow.io` returns 404, so I replaced it with https://www.mskcc.org/research-areas/labs/ed-reznik.
 4. **Project 5** ("Environmental analysis of human choices…") had no example paper on the old page. I linked the two Environmental-analysis papers from the publications list (Eshel et al. PNAS 2025; Lovat et al. Nat. Biotechnol. 2025).
 5. **Project titles** 1, 2 and 4 are short titles I wrote ("Microbes that eat CO₂", "Environmental chemistry from DNA", "Fundamentals of microbial physiology & metabolism"). The old one-line text is kept as each description.
 6. **Avi's bio.** The old People page had no bio for Avi. `_members/avi-flamholz.md` is written from the facts on his official RU profile (education, positions, awards, programs). Please edit.
-7. **Social links.** Google Scholar (`A7RolPoAAAAJ`) comes from the old site. The ORCID (`0000-0002-9278-5479`) came from an ORCID public search, and the GitHub handle (`flamholz`) is the repo owner. Please verify both. I did not add a YouTube channel, Bluesky or LinkedIn.
+7. **Social links.** Google Scholar (`A7RolPoAAAAJ`) comes from the old site. The ORCID (`0000-0002-9278-5479`) is ✅ confirmed (2026-11-17). The GitHub handle (`flamholz`) is assumed from the repo owner; please verify. I did not add a YouTube channel, Bluesky or LinkedIn.
 8. **Collaborator affiliations** are verbatim from the old site (e.g. "TATA Bangalore", "WIS").
 9. **Not migrated (RU-wide, not lab content):** the RU research-area tags, the RU sidebar's "Upcoming Events" and RU-wide news teasers, the RU global nav/footer, and the newsletter signup.
 10. **Member order.** Within the same role, members sort alphabetically by file name, so Eden appears before Sophia (the reverse of the old page).
