@@ -12,7 +12,7 @@ Content was pulled from the old pages on 2026-11-17.
 | People: Collaborators and Friends | "Collaborators and friends" list on `/team/` (text only, no member pages) |
 | People: Alums | `_members/*.md` with `group: alum`, shown in the "Alumni" section of `/team/` |
 | Publications (14 papers, 3 topics) | DOIs in `_data/sources.yaml` → `_data/citations.yaml` (generated) → three filtered lists on `research/index.md` (`/research/`) |
-| Projects (5 items) | `_data/projects.yaml` → card list on `projects/index.md` (`/projects/`) |
+| Projects (5 items) | Plain bulleted list in `projects/index.md` (`/projects/`), as on the old page. (An earlier version used LWT's image cards from `_data/projects.yaml`; replaced at your request on 2026-11-17 with this text-first layout.) |
 | Resources | `resources/index.md` (`/resources/`): tool cards (`_data/tools.yaml`), seminars list, video embeds |
 | Lab Photos (+ "Building the Lab" sub-gallery) | `photos/index.md` (`/photos/`) |
 | Lab opportunities (home page) | `join/index.md` (`/join/`) |
@@ -46,7 +46,7 @@ Top nav: Research · Projects · Team · Resources · Theory Lunch · Photos · 
 2. **"Join our staff → More info"** linked to the rockefeller.edu homepage. ✅ Removed at your request (2026-11-17).
 3. **Ed Reznik link.** `reznik-lab.webflow.io` returns 404, so I replaced it with https://www.mskcc.org/research-areas/labs/ed-reznik.
 4. **Project 5** ("Environmental analysis of human choices…") had no example paper on the old page. I linked the two Environmental-analysis papers from the publications list (Eshel et al. PNAS 2025; Lovat et al. Nat. Biotechnol. 2025).
-5. **Project titles** 1, 2 and 4 are short titles I wrote ("Microbes that eat CO₂", "Environmental chemistry from DNA", "Fundamentals of microbial physiology & metabolism"). The old one-line text is kept as each description.
+5. **Project titles.** ✅ No longer applicable: the Projects page is back to the old page's one-line descriptions, with no separate titles.
 6. **Avi's bio.** The old People page had no bio for Avi. `_members/avi-flamholz.md` is written from the facts on his official RU profile (education, positions, awards, programs). Please edit.
 7. **Social links.** Google Scholar (`A7RolPoAAAAJ`) comes from the old site. The ORCID (`0000-0002-9278-5479`) is ✅ confirmed (2026-11-17). GitHub points to the lab organization, https://github.com/Flamholz-Lab, in the footer and on Avi's member page (✅ 2026-11-17). I did not add a YouTube channel, Bluesky or LinkedIn.
 8. **Collaborator affiliations** are verbatim from the old site (e.g. "TATA Bangalore", "WIS").
@@ -56,7 +56,6 @@ Top nav: Research · Projects · Team · Resources · Theory Lunch · Photos · 
 
 ## Placeholders to fill in
 
-- [ ] **Project images.** All five projects in `_data/projects.yaml` use `images/projects/placeholder.svg`. Add images to `images/projects/` and update each `image:`.
 - [ ] **Alumni photos** (optional). All four use `images/people/placeholder.svg`.
 - [ ] **Julie's headshot** is only 297×344 px on the old site. A higher-resolution photo would look better.
 - [ ] **Favicon** `images/icon.png` is a generated "EM" placeholder. The social share image `images/share.jpg` is cropped from the 2026 group retreat photo.
