@@ -45,7 +45,7 @@ Top nav: Research · Projects · Team · Resources · Photos · Join · News (or
 4. **Project 5** ("Environmental analysis of human choices…") had no example paper on the old page. I linked the two Environmental-analysis papers from the publications list (Eshel et al. PNAS 2025; Lovat et al. Nat. Biotechnol. 2025).
 5. **Project titles** 1, 2 and 4 are short titles I wrote ("Microbes that eat CO₂", "Environmental chemistry from DNA", "Fundamentals of microbial physiology & metabolism"). The old one-line text is kept as each description.
 6. **Avi's bio.** The old People page had no bio for Avi. `_members/avi-flamholz.md` is written from the facts on his official RU profile (education, positions, awards, programs). Please edit.
-7. **Social links.** Google Scholar (`A7RolPoAAAAJ`) comes from the old site. The ORCID (`0000-0002-9278-5479`) is ✅ confirmed (2026-11-17). The GitHub handle (`flamholz`) is assumed from the repo owner; please verify. I did not add a YouTube channel, Bluesky or LinkedIn.
+7. **Social links.** Google Scholar (`A7RolPoAAAAJ`) comes from the old site. The ORCID (`0000-0002-9278-5479`) is ✅ confirmed (2026-11-17). GitHub points to the lab organization, https://github.com/Flamholz-Lab, in the footer and on Avi's member page (✅ 2026-11-17). I did not add a YouTube channel, Bluesky or LinkedIn.
 8. **Collaborator affiliations** are verbatim from the old site (e.g. "TATA Bangalore", "WIS").
 9. **Not migrated (RU-wide, not lab content):** the RU research-area tags, the RU sidebar's "Upcoming Events" and RU-wide news teasers, the RU global nav/footer, and the newsletter signup.
 10. **Member order.** Within the same role, members sort alphabetically by file name, so Eden appears before Sophia (the reverse of the old page).
