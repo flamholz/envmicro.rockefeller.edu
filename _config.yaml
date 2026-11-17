@@ -1,19 +1,33 @@
 # site properties and page defaults
-title: Lab Website Template
-subtitle: by the Greene Lab
-description: An easy-to-use, flexible website template for labs, with automatic citations, GitHub tag imports, pre-built components, and more.
-header: images/background.jpg
-footer: images/background.jpg
+title: Laboratory of Environmental Microbiology
+subtitle: Flamholz Lab · The Rockefeller University
+description: We study and engineer the roles of microbes in the global carbon cycle, from CO₂-eating autotrophs to the collective respiration of microbial communities.
+header: images/gallery/field-center-sampling-2026-08.jpg
+footer: images/gallery/field-center-sampling-2026-08.jpg
+# html-proofer runs as a separate step (scripts/check-links.sh), not on every build
 proofer: false
 
-# site social media and other links
+# where the compiled site is served (Apache, not GitHub Pages)
+url: "https://envmicro.rockefeller.edu"
+baseurl: ""
+
+# lab contact details (shown in the footer and on the Join page)
+contact:
+  name: Avi Flamholz
+  address:
+    - The Rockefeller University
+    - 1230 York Ave
+    - New York, NY 10065
+  phone: 212-327-0000
+  phone-link: "+1-212-327-0000"
+  email: aflamholz@rockefeller.edu
+
+# site social media and other links (icons in the footer)
 links:
-  email: contact@your-lab.com
-  orcid: 0000-0001-8713-9213
-  google-scholar: ETJoidYAAAAJ
-  github: your-lab
-  twitter: YourLabHandle
-  youtube: YourLabChannel
+  email: aflamholz@rockefeller.edu
+  google-scholar: A7RolPoAAAAJ
+  orcid: 0000-0002-9278-5479
+  github: flamholz
 
 ### jekyll settings
 
@@ -43,6 +57,9 @@ collections:
   posts:
     output: true
 
+# news posts live under /news/
+permalink: /news/:year/:month/:day/:title/
+
 # jekyll plugins
 plugins:
   - jekyll-spaceship
@@ -65,12 +82,22 @@ sass:
 include:
   - _styles
   - _scripts
+  - .htaccess
 
 # force jekyll to exclude certain files/folders
 exclude:
   - README.md
+  - LICENSE
   - LICENSE.md
-  - CITATION.cff
+  - MIGRATION_NOTES.md
+  - requirements.txt
+  - scripts/
+  - .venv/
+  - .docker/
+  - .github/
+  - vendor/
+  - .ruby-version
+  - .python-version
 
 # configure jekyll spaceship
 jekyll-spaceship:

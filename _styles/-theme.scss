@@ -2,9 +2,10 @@
 ---
 
 // colors
+// restrained Rockefeller-compatible palette: deep navy accent
 [data-dark="false"] {
-  --primary: #0795d9;
-  --secondary: #7dd3fc;
+  --primary: #1f4e8c;
+  --secondary: #b9cbe4;
   --text: #000000;
   --background: #ffffff;
   --background-alt: #fafafa;
@@ -14,11 +15,11 @@
   --overlay: #00000020;
 }
 [data-dark="true"] {
-  --primary: #0795d9;
-  --secondary: #075985;
+  --primary: #8fb3e3;
+  --secondary: #1f4e8c;
   --text: #ffffff;
-  --background: #181818;
-  --background-alt: #1c1c1c;
+  --background: #0c1a30;
+  --background-alt: #10213b;
   --light-gray: #404040;
   --gray: #808080;
   --dark-gray: #b0b0b0;
