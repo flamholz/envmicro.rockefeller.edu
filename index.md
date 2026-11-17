@@ -10,6 +10,13 @@ Other projects are motivated by problems that arise in climate models, which nee
 Because we are focused on microbial metabolism in natural settings, we also pursue basic questions in microbiology, systems biology, and ecology.
 If you have an interest in quantitative thinking, environmental systems, and/or microbial physiology and metabolism, [drop us a line]({{ "/join/" | relative_url }}).
 
+{%
+  include figure.html
+  image="images/home/lab-photo-bear-mountain.jpg"
+  caption="Lab hike to Bear Mountain"
+  width="100%"
+%}
+
 {% include section.html %}
 
 {% capture content %}
@@ -24,12 +31,6 @@ If you have an interest in quantitative thinking, environmental systems, and/or 
   include figure.html
   image="images/gallery/central-valley-cyanobacteria-sampling.jpg"
   caption="Sampling for cyanobacteria in the Central Valley, CA"
-%}
-
-{%
-  include figure.html
-  image="images/gallery/bear-mountain-lab-hike.jpg"
-  caption="Lab hike to Bear Mountain"
 %}
 
 {%
