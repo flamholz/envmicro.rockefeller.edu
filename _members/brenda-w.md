@@ -3,7 +3,7 @@ name: Brenda W
 image: images/people/brenda-w.jpg
 role: volunteer
 group: alum
-description: Volunteer
+description: Volunteer, 2025–2026
 affiliation: "Now: PhD student, UW Molecular Engineering & Sciences"
 links:
   home-page: https://www.moles.washington.edu/uw-mole-2026-phd-cohort/
