@@ -12,7 +12,7 @@ If you have an interest in quantitative thinking, environmental systems, and/or 
 
 {% include section.html %}
 
-## PhD and Postdoc
+## PhD and postdoc opportunities
 
 We are always interested in applications from current PhD students looking for postdoctoral opportunities.
 
