@@ -124,7 +124,7 @@ scripts/check-links.sh    # html-proofer, internal links (add --external for ext
 ```
 
 - Ruby is pinned by `.ruby-version` (3.4) and `Gemfile.lock` (bundler 2.5.6). Python packages are pinned in `requirements.txt`, while `_cite/requirements.txt` keeps the template's looser ranges.
-- On macOS the system Ruby (2.6) is too old: `brew install ruby@3.4`. The build script finds it automatically.
+- On macOS the system Ruby (2.6) is too old: `brew install ruby@3.4`. The build script finds it automatically. The citation step needs Python ≥ 3.10 (the macOS system `python3` is 3.9); the script uses the first suitable `python3` on your PATH, or set `PYTHON=`.
 - `SKIP_CITE=1 scripts/build.sh` builds without network access from the committed `citations.yaml`.
 - CI: `.github/workflows/build.yaml` runs on every push and PR. It runs `build.sh` and `check-links.sh`, then uploads `_site/` (including `.htaccess`) as the artifact `site-main` (on main) or `site-<sha>`. Download it from the run's summary page.
 - The output uses root-relative URLs (`baseurl: ""`) and contains no server-side code, so it works when copied into the root of the docroot. Absolute URLs (feed, sitemap, social meta tags) use `url: https://envmicro.rockefeller.edu`.

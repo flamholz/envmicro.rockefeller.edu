@@ -5,7 +5,7 @@ Built with the Greene Lab [Lab Website Template](https://github.com/greenelab/la
 
 ## Build
 
-Requirements: Ruby ≥ 3.1 (3.4 recommended; on macOS `brew install ruby@3.4`) and Python ≥ 3.9.
+Requirements: Ruby ≥ 3.1 (3.4 recommended; on macOS `brew install ruby@3.4`) and Python ≥ 3.10 (for the citation step).
 
 ```bash
 scripts/build.sh            # gems + venv + citations + production build -> _site/

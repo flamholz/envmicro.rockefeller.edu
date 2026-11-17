@@ -13,7 +13,7 @@
 #   SKIP_CITE=1     skip step 3 and use the committed _data/citations.yaml
 #                   (e.g. when offline)
 #   RUBY_BIN_DIR    directory containing ruby >= 3.1 if it is not first on PATH
-#   PYTHON          python interpreter to create .venv with (default: python3)
+#   PYTHON          python >= 3.10 to create .venv with (default: first found)
 
 set -euo pipefail
 
@@ -72,8 +72,22 @@ fi
 # -------------------------------------------------------------- python ----
 if [[ "${SKIP_CITE:-0}" != "1" ]]; then
   log "Setting up Python venv (.venv)"
-  PYTHON="${PYTHON:-python3}"
+  py_ok() { "$1" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 10) else 1)' 2>/dev/null; }
+  # an existing venv built with an older python can't install the pins
+  if [[ -x .venv/bin/python ]] && ! py_ok .venv/bin/python; then
+    echo "removing .venv (python too old)"
+    rm -rf .venv
+  fi
   if [[ ! -x .venv/bin/python ]]; then
+    if [[ -z "${PYTHON:-}" ]]; then
+      for cand in python3 python3.13 python3.12 python3.11 python3.10 \
+                  /opt/homebrew/bin/python3 /usr/local/bin/python3; do
+        if command -v "$cand" >/dev/null && py_ok "$cand"; then PYTHON="$cand"; break; fi
+      done
+    fi
+    [[ -n "${PYTHON:-}" ]] && py_ok "$PYTHON" || die "Python >= 3.10 is required for the citation step.
+  Install one (e.g. brew install python@3.12) or set PYTHON=/path/to/python3, or use SKIP_CITE=1."
+    echo "creating .venv with $("$PYTHON" --version) ($(command -v "$PYTHON"))"
     "$PYTHON" -m venv .venv
   fi
   .venv/bin/python -m pip install --quiet --upgrade pip
