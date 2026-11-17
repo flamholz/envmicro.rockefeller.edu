@@ -1,6 +1,6 @@
 ---
 name: Javi Hernandez Sancho
-image: images/people/placeholder.svg
+image: images/people/javier-hernandez-sancho.jpg
 role: postdoc
 aliases:
   - Javi Hernandez Sancho
