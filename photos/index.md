@@ -62,7 +62,9 @@ Click a photo to open the full album (Google Photos).
 
 {% endcapture %}
 
+<div class="photo-frame-grid">
 {% include grid.html style="gallery" content=content %}
+</div>
 
 {% include section.html %}
 

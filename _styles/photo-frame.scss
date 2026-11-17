@@ -5,12 +5,18 @@
 // thin border and soft shadow. usage: wrap a figure.html include in
 // <div class="photo-frame"> ... </div>
 // add photo-frame-wide to use the full text width (e.g. the home page lab photo)
+// wrap a grid.html include in <div class="photo-frame-grid"> to frame every
+// thumbnail in the grid the same way (e.g. the album covers on /photos/)
 .photo-frame .figure {
   margin: 30px auto;
 }
 
 .photo-frame .figure-image img {
   width: min(100%, 640px) !important;
+}
+
+.photo-frame .figure-image img,
+.photo-frame-grid .figure-image img {
   padding: 10px;
   background: #ffffff;
   border: 1px solid var(--light-gray);
