@@ -2,55 +2,101 @@
 # Add a paper by its DOI, then run scripts/build.sh (or `python _cite/cite.py`)
 # to regenerate _data/citations.yaml.
 #
+# `image:` is the thumbnail shown beside the paper: one panel cropped from a
+# figure in the paper (images/publications/, ~600px, author-year-topic.jpg).
+#
 # The research page shows one list per topic tag:
 #   metabolism    -> Microbial metabolism, physiology & communities
 #   co2-fixation  -> Microbial CO2 fixation & rubisco
 #   environment   -> Environmental analysis
+#   earlier       -> Earlier contributions
 
 # --- Microbial metabolism, physiology & communities ---
 
 - id: doi:10.1073/pnas.2404048121
+  image: images/publications/flamholz-2025-proteome-electron-acceptor.jpg
   tags: [metabolism]
 
 - id: doi:10.1128/msystems.00763-24
+  image: images/publications/flamholz-2024-o2-prediction.jpg
   tags: [metabolism]
 
 - id: doi:10.1073/pnas.2309387120
+  image: images/publications/goyal-2023-closed-ecosystems.jpg
   tags: [metabolism]
 
 - id: doi:10.1128/mbio.02076-22
+  image: images/publications/flamholz-2022-optical-o2-sensors.jpg
   tags: [metabolism]
 
 - id: doi:10.1073/pnas.2110787119
+  image: images/publications/goldford-2022-coenzyme-redundancy.jpg
   tags: [metabolism]
 
 # --- Microbial CO2 fixation & rubisco ---
 
 - id: doi:10.1038/s41586-024-08455-0
+  image: images/publications/prywes-2025-rubisco-map.jpg
   tags: [co2-fixation]
 
 - id: doi:10.1073/pnas.2300466120
+  image: images/publications/wang-2023-ancestral-rubisco-isotopes.jpg
   tags: [co2-fixation]
 
 - id: doi:10.1073/pnas.2210539119
+  image: images/publications/flamholz-2022-ccm-trajectories.jpg
   tags: [co2-fixation]
 
 - id: doi:10.7554/eLife.59882
+  image: images/publications/flamholz-2020-ccm-reconstitution.jpg
   tags: [co2-fixation]
 
 - id: doi:10.1016/j.cub.2020.01.076
+  image: images/publications/flamholz-2020-photosynthesis-geologic-time.jpg
   tags: [co2-fixation]
 
 - id: doi:10.1021/acs.biochem.9b00237
+  image: images/publications/flamholz-2019-rubisco-tradeoffs.jpg
   tags: [co2-fixation]
 
 - id: doi:10.1038/s41564-019-0520-8
+  image: images/publications/desmarais-2019-dabs.jpg
   tags: [co2-fixation]
 
 # --- Environmental analysis ---
 
 - id: doi:10.1038/s41587-025-02632-w
+  image: images/publications/lovat-2025-electro-microbial.jpg
   tags: [environment]
 
 - id: doi:10.1073/pnas.2404329122
+  image: images/publications/eshel-2025-grass-fed-beef.jpg
   tags: [environment]
+
+# --- Earlier contributions ---
+
+- id: doi:10.1073/pnas.1215283110
+  tags: [earlier]
+
+- id: doi:10.1073/pnas.1525145113
+  # title cleaned up (Crossref's has stray markup around CO2);
+  # \* marks equal contribution (escaped so markdown doesn't italicize)
+  title: pH determines the energetic efficiency of the cyanobacterial CO₂ concentrating mechanism
+  authors:
+    - Niall M. Mangan\*
+    - Avi Flamholz\*
+    - Rachel D. Hood
+    - Ron Milo
+    - David F. Savage
+  tags: [earlier]
+
+- id: doi:10.1093/nar/gkr874
+  image: images/publications/flamholz-2012-equilibrator.jpg
+  # Crossref has initials only and a "--" in the title
+  title: eQuilibrator — the biochemical thermodynamics calculator
+  authors:
+    - Avi Flamholz
+    - Elad Noor
+    - Arren Bar-Even
+    - Ron Milo
+  tags: [earlier]

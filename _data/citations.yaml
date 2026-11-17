@@ -11,6 +11,7 @@
   publisher: Proceedings of the National Academy of Sciences
   date: '2025-01-03'
   link: https://doi.org/hcsrjj
+  image: images/publications/flamholz-2025-proteome-electron-acceptor.jpg
   tags:
   - metabolism
   plugin: sources.py
@@ -28,6 +29,7 @@
   publisher: mSystems
   date: '2024-10-22'
   link: https://doi.org/hcsrjk
+  image: images/publications/flamholz-2024-o2-prediction.jpg
   tags:
   - metabolism
   plugin: sources.py
@@ -42,6 +44,7 @@
   publisher: Proceedings of the National Academy of Sciences
   date: '2023-12-21'
   link: https://doi.org/hcsrjm
+  image: images/publications/goyal-2023-closed-ecosystems.jpg
   tags:
   - metabolism
   plugin: sources.py
@@ -57,6 +60,7 @@
   publisher: mBio
   date: '2022-12-20'
   link: https://doi.org/hcsrjn
+  image: images/publications/flamholz-2022-optical-o2-sensors.jpg
   tags:
   - metabolism
   plugin: sources.py
@@ -71,6 +75,7 @@
   publisher: Proceedings of the National Academy of Sciences
   date: '2022-03-28'
   link: https://doi.org/hcsrjp
+  image: images/publications/goldford-2022-coenzyme-redundancy.jpg
   tags:
   - metabolism
   plugin: sources.py
@@ -102,6 +107,7 @@
   publisher: Nature
   date: '2025-01-22'
   link: https://doi.org/g84qwk
+  image: images/publications/prywes-2025-rubisco-map.jpg
   tags:
   - co2-fixation
   plugin: sources.py
@@ -124,6 +130,7 @@
   publisher: Proceedings of the National Academy of Sciences
   date: '2023-05-08'
   link: https://doi.org/hcsrjq
+  image: images/publications/wang-2023-ancestral-rubisco-isotopes.jpg
   tags:
   - co2-fixation
   plugin: sources.py
@@ -143,6 +150,7 @@
   publisher: Proceedings of the National Academy of Sciences
   date: '2022-12-01'
   link: https://doi.org/grqcmf
+  image: images/publications/flamholz-2022-ccm-trajectories.jpg
   tags:
   - co2-fixation
   plugin: sources.py
@@ -166,6 +174,7 @@
   publisher: eLife
   date: '2020-10-21'
   link: https://doi.org/ghgfjq
+  image: images/publications/flamholz-2020-ccm-reconstitution.jpg
   tags:
   - co2-fixation
   plugin: sources.py
@@ -178,6 +187,7 @@
   publisher: Current Biology
   date: '2020-05-01'
   link: https://doi.org/ggwk97
+  image: images/publications/flamholz-2020-photosynthesis-geologic-time.jpg
   tags:
   - co2-fixation
   plugin: sources.py
@@ -199,6 +209,7 @@
   publisher: Biochemistry
   date: '2019-07-01'
   link: https://doi.org/gnttrc
+  image: images/publications/flamholz-2019-rubisco-tradeoffs.jpg
   tags:
   - co2-fixation
   plugin: sources.py
@@ -220,6 +231,7 @@
   publisher: Nature Microbiology
   date: '2019-08-12'
   link: https://doi.org/grmtk7
+  image: images/publications/desmarais-2019-dabs.jpg
   tags:
   - co2-fixation
   plugin: sources.py
@@ -239,6 +251,7 @@
   publisher: Nature Biotechnology
   date: '2025-04-22'
   link: https://doi.org/hcsrjr
+  image: images/publications/lovat-2025-electro-microbial.jpg
   tags:
   - environment
   plugin: sources.py
@@ -254,7 +267,54 @@
   publisher: Proceedings of the National Academy of Sciences
   date: '2025-03-17'
   link: https://doi.org/g88rcn
+  image: images/publications/eshel-2025-grass-fed-beef.jpg
   tags:
   - environment
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1073/pnas.1215283110
+  title: Glycolytic strategy as a tradeoff between energy yield and protein cost
+  authors:
+  - Avi Flamholz
+  - Elad Noor
+  - Arren Bar-Even
+  - Wolfram Liebermeister
+  - Ron Milo
+  publisher: Proceedings of the National Academy of Sciences
+  date: '2013-04-29'
+  link: https://doi.org/f436rw
+  tags:
+  - earlier
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1073/pnas.1525145113
+  title: "pH determines the energetic efficiency of the cyanobacterial CO\u2082 concentrating\
+    \ mechanism"
+  authors:
+  - Niall M. Mangan\*
+  - Avi Flamholz\*
+  - Rachel D. Hood
+  - Ron Milo
+  - David F. Savage
+  publisher: Proceedings of the National Academy of Sciences
+  date: '2016-08-22'
+  link: https://doi.org/f84gsb
+  tags:
+  - earlier
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1093/nar/gkr874
+  title: "eQuilibrator \u2014 the biochemical thermodynamics calculator"
+  authors:
+  - Avi Flamholz
+  - Elad Noor
+  - Arren Bar-Even
+  - Ron Milo
+  publisher: Nucleic Acids Research
+  date: '2011-11-07'
+  link: https://doi.org/fts7xv
+  image: images/publications/flamholz-2012-equilibrator.jpg
+  tags:
+  - earlier
   plugin: sources.py
   file: sources.yaml

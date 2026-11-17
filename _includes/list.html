@@ -11,11 +11,19 @@
   | reverse
 %}
 
+{% comment %}
+  lab site: hide_years=true keeps the newest-first order but drops the
+  year headings (used on the Publications page)
+{% endcomment %}
+
 {% for year in years %}
   {% assign data = year.items %}
 
-  {% if years.size > 1 %}
+  {% if years.size > 1 and include.hide_years != true %}
     {{--}}<h3 id="{{ year.name }}">{{ year.name }}</h3>
+  {% endif %}
+
+  {% if years.size > 1 %}
     {% assign data = data | sort: "date" | reverse %}
   {% endif %}
 

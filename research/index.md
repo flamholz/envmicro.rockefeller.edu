@@ -7,9 +7,6 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Publications
 
-Recent papers by broad topic.
-See [Google Scholar](https://scholar.google.com/citations?user=A7RolPoAAAAJ&hl=en) for a complete list.
-
 {%
   include button.html
   type="google-scholar"
@@ -25,16 +22,22 @@ See [Google Scholar](https://scholar.google.com/citations?user=A7RolPoAAAAJ&hl=e
 
 ## Microbial metabolism, physiology & communities
 
-{% include list.html data="citations" component="citation" filter="tags && tags.include?('metabolism')" %}
+{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('metabolism')" %}
 
 {% include section.html %}
 
 ## Microbial CO₂ fixation & rubisco
 
-{% include list.html data="citations" component="citation" filter="tags && tags.include?('co2-fixation')" %}
+{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('co2-fixation')" %}
 
 {% include section.html %}
 
 ## Environmental analysis
 
-{% include list.html data="citations" component="citation" filter="tags && tags.include?('environment')" %}
+{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('environment')" %}
+
+{% include section.html %}
+
+## Earlier contributions
+
+{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('earlier')" %}
