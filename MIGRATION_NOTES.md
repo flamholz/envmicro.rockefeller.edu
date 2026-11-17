@@ -19,6 +19,7 @@ Content was pulled from the old pages on 2026-11-17.
 | Contact block | Footer on every page: lab name and postal address only (`contact:` in `_config.yaml`). The phone number and email are deliberately not published, except the email on `/join/`, written as "aflamholz at rockefeller dot edu" (no mailto link) to discourage scraping |
 | Tri-I Theory Lunch (was flamholz.github.io/theory-lunch/, added 2026-11-17) | `theory-lunch/index.md` (`/theory-lunch/`), top-level nav link and a button on the home page. Photo reuses `images/photos/tri-i-theory-lunch.jpg` (same image as the Google Photos hotlink). "Write to me" links to the Join page contact. The old GitHub Pages copy should redirect here (e.g. `redirect_to: https://envmicro.rockefeller.edu/theory-lunch/` with jekyll-redirect-from in that repo) |
 | News item (Nov 21, 2024) | `_posts/2024-11-21-new-faculty-member.md`, listed at `/news/` |
+| (new) News items | Welcome posts for James (Feb 1, 2025), Sophia (May 15, 2025), Eden (Sep 15, 2025), Julie (Feb 17, 2026) and Javi (Nov 16, 2026), and Julie's Women & Science Postdoctoral Fellowship (Nov 13, 2025). Text is drawn from the Team bios |
 
 Top nav: Research · Projects · Team · Resources · Theory Lunch · Photos · Join · News (order set by `nav.order` in each page's front matter).
 
@@ -105,14 +106,16 @@ Create `_posts/YYYY-MM-DD-short-title.md`:
 ```markdown
 ---
 title: Headline
-tags: news
+tags: news                             # e.g. news, team, award
+image: images/people/someone.jpg       # optional: thumbnail on the News list
+banner: images/photos/something.jpg    # optional: faded banner behind the title
 ---
 
 Text of the post. Link out with a normal Markdown link or a button:
 {% include button.html link="https://…" text="Read more" icon="fa-solid fa-arrow-right" flip=true %}
 ```
 
-It appears at `/news/` and gets its own page at `/news/YYYY/MM/DD/short-title/`.
+It appears at `/news/` and gets its own page at `/news/YYYY/MM/DD/short-title/`. Posts show only the date in the file name; the template's "last updated" stamp (from git history) was removed, since backdated posts would all show the day they were committed. In the template, `image` is also the banner on the post page; here the banner is a separate, opt-in `banner` key, so welcome posts don't put a headshot behind the title.
 
 ### Add photos
 
