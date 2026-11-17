@@ -1,32 +1,30 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17228741.svg)](https://doi.org/10.5281/zenodo.17228741)
+# envmicro.rockefeller.edu
 
-<h1 align="center">Lab Website Template</h1>
-<p align="center">
-<img height="200" src="https://raw.githubusercontent.com/greenelab/lab-website-template/main/images/share.jpg?raw=true" alt="Lab Website Template">
-</p>
+Website of the **Laboratory of Environmental Microbiology** (Flamholz Lab) at The Rockefeller University.
+Built with the Greene Lab [Lab Website Template](https://github.com/greenelab/lab-website-template) v1.4.1 (Jekyll) and served as static files from Apache at <https://envmicro.rockefeller.edu>.
 
-Lab Website Template (LWT) is an easy-to-use, flexible website template for labs.
-Spend less time worrying about managing a website and citations, and more time running your lab.
+## Build
 
-👇👇 **Get Started** 👇👇
+Requirements: Ruby ≥ 3.1 (3.4 recommended; on macOS `brew install ruby@3.4`) and Python ≥ 3.9.
 
-[**Documentation**](https://greene-lab.gitbook.io/lab-website-template-docs)
+```bash
+scripts/build.sh            # gems + venv + citations + production build -> _site/
+scripts/check-links.sh      # html-proofer on _site/ (internal links)
+python3 -m http.server -d _site 4000   # preview at http://localhost:4000
+```
 
-## Key Features
+`SKIP_CITE=1 scripts/build.sh` builds offline from the committed `_data/citations.yaml`.
 
-- 🤖 Based on Git, GitHub, and Jekyll.
-- 📜 Automatically generated citations from simple identifiers (DOI, PubMed, ORCID, and many more) using Manubot. E.g. `doi:1234/5678` -> `title`, `authors`, `publisher`, `date`, etc.
-- 🧱 A comprehensive and flexible suite of pre-made components (building blocks) for structuring and styling your website:
-  - Formatted tables, code blocks, figures, and other basic elements.
-  - Citations with thumbnails and other rich details.
-  - List large sets of data with flexible filters and components.
-  - ...many more
-- 👁️ Automatic pull request previews.
-- ⚙️ Easy and automated configuration.
-- 👥 Team member pages with bios, roles, and social media links.
-- 🖋️ Blog posts with tags and rich content.
-- 📱 Works and looks good on desktop and mobile.
-- 🤝 Great documentation and support (if we do say so ourselves).
-- ... and much more!
+For live-reloading while editing: `bundle exec jekyll serve` (after one `scripts/build.sh`, with the same Ruby on your PATH).
 
-![GitHub last commit](https://img.shields.io/github/last-commit/greenelab/lab-website-template)
+Every push runs `.github/workflows/build.yaml`, which builds the site and uploads `_site/` as a downloadable artifact (no deployment).
+
+## Editing
+
+See [MIGRATION_NOTES.md](MIGRATION_NOTES.md) for how to add members, papers and news posts, the open placeholders, and deployment notes.
+Template documentation: <https://greene-lab.gitbook.io/lab-website-template-docs>.
+
+## License
+
+Site content © the Flamholz Lab ([LICENSE](LICENSE)).
+The Lab Website Template is © Greene Laboratory under the BSD 3-Clause License ([LICENSE.md](LICENSE.md)).

@@ -1,0 +1,170 @@
+# Migration notes
+
+Migration of the lab pages on rockefeller.edu (Home, People, Projects, Publications, Resources, Lab Photos) to a Lab Website Template (LWT) v1.4.1 site, served as static files from Apache at https://envmicro.rockefeller.edu.
+Content was pulled from the old pages on 2026-11-17.
+
+## Where things went
+
+| Old page / content | New location |
+|---|---|
+| Home: "About the lab", research-area tags, photo carousel | `index.md` (`/`): intro, tags linking to the RU research areas, captioned 6-photo gallery, buttons to every section |
+| People: PI + 5 members | `_members/*.md`, shown on `team/index.md` (`/team/`); each person also gets a page at `/members/<name>/` |
+| People: Collaborators and Friends | "Collaborators and friends" list on `/team/` (text only, no member pages) |
+| People: Alums | `_members/*.md` with `group: alum`, shown in the "Alumni" section of `/team/` |
+| Publications (14 papers, 3 topics) | DOIs in `_data/sources.yaml` → `_data/citations.yaml` (generated) → three filtered lists on `research/index.md` (`/research/`) |
+| Projects (5 items) | `_data/projects.yaml` → card list on `projects/index.md` (`/projects/`) |
+| Resources | `resources/index.md` (`/resources/`): tool cards (`_data/tools.yaml`), seminars list, video embeds |
+| Lab Photos (+ "Building the Lab" sub-gallery) | `photos/index.md` (`/photos/`) |
+| Lab opportunities (home page) | `join/index.md` (`/join/`) |
+| Contact block | Footer on every page (from `contact:` in `_config.yaml`) and a contact section on `/join/` |
+| News item (Nov 21, 2024) | `_posts/2024-11-21-new-faculty-member.md`, listed at `/news/` |
+
+Top nav: Research · Projects · Team · Resources · Photos · Join · News (order set by `nav.order` in each page's front matter).
+
+## Decisions and deviations from the brief
+
+- **`_config.yaml`, not `_config.yml`.** The template uses the `.yaml` name, and its scripts and Docker setup expect it.
+- **Pages are folders** (`photos/index.md`, not `photos.md`). The LWT header builds nav links from each page's directory, so a top-level `photos.md` would link to `/`.
+- **Role keys.** The template's PI role is `principal-investigator`, not `pi`. I added `staff` (label "Research Associate") and `volunteer` to `_data/types.yaml`, and relabeled `postdoc` → "Postdoctoral Fellow" and `phd` → "Graduate Student" to match the old site. Pippa uses `programmer` (shown as her fellowship title); the SURF students use `undergrad`.
+- **Alumni** are member files with `group: alum`, which is LWT's convention. They get a member page with a neutral placeholder portrait (`images/people/placeholder.svg`). The past program is shown as `description` and the current position as `affiliation`.
+- **Photos is its own page.** The old Lab Photos page and the home carousel share only one photo (the 2026 Innisfree Garden shot), so they were not merged. The "Building the Lab" sub-gallery (12 captioned photos) was migrated into `/photos/` rather than linking to the old rockefeller.edu page. The album covers link to the Google Photos albums, as before.
+- **Videos.** LWT has no embed component. Its `jekyll-spaceship` plugin can turn a Markdown image of a YouTube URL into an iframe, but it uses `youtube.com` (not the privacy-enhanced `youtube-nocookie.com` the old site used) and a fixed height. I added a small responsive include, `_includes/embed.html` (styles in `_styles/embed.scss`). Usage: `{% include embed.html youtube="VIDEO_ID" title="…" %}`.
+- **Topic filtering.** Each source has `tags: [metabolism | co2-fixation | environment]`, and the Research page filters with `filter="tags && tags.include?('…')"`. LWT's list adds year subheadings within each topic.
+- **Citation links** are the shortDOI URLs that Manubot generates (e.g. `https://doi.org/hcsrjj`), which redirect to the full DOI. During the cite step Manubot prints a `403` warning for a PubMed Central ID lookup; it is harmless, because the citations come from DOI metadata.
+- **Template pieces removed.** The demo members, posts and projects; `testbed.md`; the demo `contact/` page (its content now lives in the footer and on `/join/`); the template's ORCID source (`_data/orcid.yaml`, which belonged to someone else); the committed citation cache; `CITATION.cff` and `CHANGELOG.md`; the issue and discussion templates; and **all of the template's GitHub workflows**. Those workflows deploy to GitHub Pages, or exist only to auto-commit `citations.yaml` around that deploy. The new `build.yaml` runs the citation step as part of every build instead.
+- **Small template fixes.** Post tag links pointed at `/blog`, so they now point at `/news/`. The member page's "posts" link was updated the same way. I added a `gallery` grid style (`_styles/gallery.scss`) and footer contact styles.
+- **Styling.** The default theme, with only the color variables in `_styles/-theme.scss` changed to navy (`#1f4e8c` light, `#8fb3e3` on dark). Header and footer use the Millbrook lab-trip photo (`header:`/`footer:` in `_config.yaml`).
+- **Images** were downloaded at full resolution, resized (max 1600 px for photos, 800 px for headshots, never upscaled), re-encoded as JPEG (Julie's PNG kept), and stripped of EXIF/GPS metadata. Total: about 7 MB.
+- **Copy edits.** Two typo fixes from the old site ("applications **from** current PhD students", "we **host**") and light capitalization in photo captions. Everything else is verbatim.
+
+## Please review / couldn't fully migrate
+
+1. **2026 NYLittle album link.** On the old Photos page, that item's image linked to `photos.app.goo.gl/ToQLJfMvV656hQDCA`, but its caption linked to the 2025 album (`q6MQtLGuiqjW6cTu9`), which looks like a copy-paste slip. I used `ToQL…` for both. Please confirm.
+2. **"Join our staff → More info"** linked to the rockefeller.edu homepage, probably as a stand-in for a careers page. Kept as is in `join/index.md`.
+3. **Ed Reznik link.** `reznik-lab.webflow.io` returns 404, so I replaced it with https://www.mskcc.org/research-areas/labs/ed-reznik.
+4. **Project 5** ("Environmental analysis of human choices…") had no example paper on the old page. I linked the two Environmental-analysis papers from the publications list (Eshel et al. PNAS 2025; Lovat et al. Nat. Biotechnol. 2025).
+5. **Project titles** 1, 2 and 4 are short titles I wrote ("Microbes that eat CO₂", "Environmental chemistry from DNA", "Fundamentals of microbial physiology & metabolism"). The old one-line text is kept as each description.
+6. **Avi's bio.** The old People page had no bio for Avi. `_members/avi-flamholz.md` is written from the facts on his official RU profile (education, positions, awards, programs). Please edit.
+7. **Social links.** Google Scholar (`A7RolPoAAAAJ`) comes from the old site. The ORCID (`0000-0002-9278-5479`) came from an ORCID public search, and the GitHub handle (`flamholz`) is the repo owner. Please verify both. I did not add a YouTube channel, Bluesky or LinkedIn.
+8. **Collaborator affiliations** are verbatim from the old site (e.g. "TATA Bangalore", "WIS").
+9. **Not migrated (RU-wide, not lab content):** the RU sidebar's "Upcoming Events" and RU-wide news teasers, the RU global nav/footer, and the newsletter signup.
+10. **Member order.** Within the same role, members sort alphabetically by file name, so Eden appears before Sophia (the reverse of the old page).
+11. **External dependencies** (from the template, loaded by visitors' browsers): Google Fonts, Font Awesome (use.fontawesome.com), unpkg (popper, tippy, mark.js) and jsDelivr. If RU web policy requires self-hosting or a Content-Security-Policy, these need attention.
+
+## Placeholders to fill in
+
+- [ ] **Project images.** All five projects in `_data/projects.yaml` use `images/projects/placeholder.svg`. Add images to `images/projects/` and update each `image:`.
+- [ ] **Alumni photos** (optional). All four use `images/people/placeholder.svg`.
+- [ ] **Julie's headshot** is only 297×344 px on the old site. A higher-resolution photo would look better.
+- [ ] **Favicon** `images/icon.png` is a generated "EM" placeholder. The social share image `images/share.jpg` is cropped from the 2026 group retreat photo.
+- [ ] **Tool cards** use generated text tiles (`images/resources/*.svg`). Swap in screenshots or logos if you prefer.
+- [ ] Bios for current members are as on the old site. Links (email, ORCID, GitHub, website) can be added under `links:` in each member file.
+
+## How to…
+
+### Add a new member
+
+Create `_members/firstname-lastname.md`:
+
+```yaml
+---
+name: Firstname Lastname
+image: images/people/firstname-lastname.jpg   # put a ~800px photo here
+role: phd          # principal-investigator | postdoc | phd | staff | volunteer | undergrad | programmer
+links:             # optional; keys are defined in _data/types.yaml
+  email: someone@rockefeller.edu
+  orcid: 0000-0000-0000-0000
+  github: username
+---
+
+One- or two-sentence bio.
+```
+
+The Team page shows members by role, in the order postdoc → phd → staff → volunteer. A new role needs an entry in `_data/types.yaml` and a matching line in `team/index.md`.
+When someone leaves, add `group: alum`, a `description:` (their role and years in the lab), and an `affiliation:` ("Now: …").
+
+### Add a paper (by DOI)
+
+1. Add an entry to `_data/sources.yaml`, using the topic tag for the Research-page section it belongs in:
+   ```yaml
+   - id: doi:10.1234/abcd.5678
+     tags: [metabolism]   # metabolism | co2-fixation | environment
+   ```
+2. Run `scripts/build.sh`. It regenerates `_data/citations.yaml` (title, authors, journal, date) with Manubot.
+3. Commit both `sources.yaml` and `citations.yaml`.
+
+Optional fields that override or extend the generated citation: `title`, `date`, `link`, `image`, `description`, `buttons`.
+For a new topic, add a section and `list.html` call to `research/index.md` with a new tag.
+
+### Add a news post
+
+Create `_posts/YYYY-MM-DD-short-title.md`:
+
+```markdown
+---
+title: Headline
+tags: news
+---
+
+Text of the post. Link out with a normal Markdown link or a button:
+{% include button.html link="https://…" text="Read more" icon="fa-solid fa-arrow-right" flip=true %}
+```
+
+It appears at `/news/` and gets its own page at `/news/YYYY/MM/DD/short-title/`.
+
+### Add photos
+
+Put resized images in `images/photos/`, then add a `{% include figure.html image="…" caption="…" link="…" %}` block inside the relevant `{% capture content %}` in `photos/index.md`. The caption doubles as alt text.
+
+## Build
+
+```bash
+scripts/build.sh          # Ruby gems (vendor/bundle), Python venv (.venv), citations, production build -> _site/
+scripts/check-links.sh    # html-proofer, internal links (add --external for external links)
+```
+
+- Ruby is pinned by `.ruby-version` (3.4) and `Gemfile.lock` (bundler 2.5.6). Python packages are pinned in `requirements.txt`, while `_cite/requirements.txt` keeps the template's looser ranges.
+- On macOS the system Ruby (2.6) is too old: `brew install ruby@3.4`. The build script finds it automatically.
+- `SKIP_CITE=1 scripts/build.sh` builds without network access from the committed `citations.yaml`.
+- CI: `.github/workflows/build.yaml` runs on every push and PR. It runs `build.sh` and `check-links.sh`, then uploads `_site/` (including `.htaccess`) as the artifact `site-main` (on main) or `site-<sha>`. Download it from the run's summary page.
+- The output uses root-relative URLs (`baseurl: ""`) and contains no server-side code, so it works when copied into the root of the docroot. Absolute URLs (feed, sitemap, social meta tags) use `url: https://envmicro.rockefeller.edu`.
+
+### `.htaccess`
+
+`.htaccess` in the repo root is copied into `_site/`. It sets `ErrorDocument 404 /404.html`, turns off directory listings, sets cache headers (images 30 days, CSS/JS 1 day since filenames aren't fingerprinted, HTML always revalidated), and enables gzip when the modules exist.
+
+**It only takes effect if Apache allows overrides for the docroot.** The directives need at least `AllowOverride FileInfo Indexes Options` (or `All`).
+With `AllowOverride None` the file is silently ignored.
+If overrides are partly allowed but `Options` is not, Apache returns **500 errors** for the whole site.
+If IT prefers, the same directives can go in the `<VirtualHost>` / `<Directory>` block instead, and `.htaccess` can be removed from `_config.yaml`'s `include:` list.
+The cache and compression rules are wrapped in `<IfModule>`, so missing `mod_expires`, `mod_headers` or `mod_deflate` won't break anything.
+
+## Deployment (TBD)
+
+There is no deploy script yet. The build produces a self-contained `_site/` that can be copied into any Apache docroot.
+
+### Questions for IT
+
+1. **Access method.** SSH/rsync, SFTP only, Git on the server, or does IT upload files for us?
+2. **Docroot path** for envmicro.rockefeller.edu, and which user/group should own the files.
+3. **`.htaccess`.** Is `AllowOverride` enabled for the docroot, and at what level (`All`, or `FileInfo Indexes Options`)? If not, can they add the rules from `.htaccess` to the vhost?
+4. **HTTPS.** Who provisions and renews the certificate (RU wildcard, Let's Encrypt, InCommon)? Will they redirect HTTP → HTTPS and `www.` → bare domain?
+5. **Where builds run.** Can Ruby 3.x and Python run on the server, or must the site be built elsewhere and only static files copied? (Building elsewhere is simpler and recommended.)
+6. **Automation.** Will they allow a deploy key or service account (for CI), or must deploys be manual?
+7. **Policies.** Any Content-Security-Policy, analytics or accessibility requirements, and is loading fonts and scripts from external CDNs allowed?
+
+### Likely options
+
+**A. rsync from your machine (simplest, if SSH is available).**
+`scripts/build.sh && rsync -avz --delete _site/ user@server:/path/to/docroot/`.
+This is one command, gives full control, and needs nothing on the server. The downside is that deploys depend on your laptop and environment. (SFTP-only access works the same way with `lftp mirror -R` or a GUI client.)
+
+**B. GitHub Action deploying over SSH on push to `main`.**
+Add a deploy job after `build` in `.github/workflows/build.yaml` that rsyncs `_site/` over SSH. Store an SSH deploy key for a restricted account as a repository secret, and pin the server's host key.
+Merging to main updates the site automatically, with no local toolchain needed. This needs IT to allow inbound SSH from GitHub's runner IP ranges (or a self-hosted runner inside RU) and a key with write access to the docroot.
+
+**C. Server pulls a built artifact (if IT allows outbound HTTPS but not inbound SSH).**
+A cron job on the server downloads the latest `site-main` artifact (or a GitHub Release asset) with a read-only token, unpacks it to a staging directory and swaps it in (`rsync --delete` or a symlink flip).
+No credentials for the server live in GitHub, but someone has to maintain the cron/script on the server, plus a token with `actions:read` scope.
+
+If IT uploads files for us, the artifact from any CI run (`site-main.zip`) is the deliverable: unzip it into the docroot as is.

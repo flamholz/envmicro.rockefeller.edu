@@ -1,0 +1,44 @@
+# Apache configuration for the static lab site.
+# Takes effect only if the server allows overrides for this directory
+# (AllowOverride FileInfo Indexes Options, or All). Otherwise move these
+# rules into the <VirtualHost>/<Directory> config. See MIGRATION_NOTES.md.
+
+# custom error page
+ErrorDocument 404 /404.html
+
+# no directory listings
+Options -Indexes
+DirectoryIndex index.html
+
+AddDefaultCharset utf-8
+
+# caching: images change rarely; CSS/JS filenames are not fingerprinted, so
+# keep them short; always revalidate HTML so content updates show immediately
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType text/css "access plus 1 day"
+  ExpiresByType application/javascript "access plus 1 day"
+  ExpiresByType text/javascript "access plus 1 day"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpe?g|png|svg|ico|webp)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+  <FilesMatch "\.(html|xml)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# compress text responses
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/xml application/rss+xml application/atom+xml image/svg+xml
+</IfModule>
