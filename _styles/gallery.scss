@@ -1,0 +1,22 @@
+---
+---
+
+// photo gallery: uniform 4:3 thumbnails with captions underneath
+.grid[data-style="gallery"] {
+  gap: 30px;
+
+  & .figure {
+    justify-content: flex-start;
+  }
+
+  & img {
+    width: 100% !important;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  & .figure-caption {
+    font-size: 0.95rem;
+    line-height: var(--compact);
+  }
+}

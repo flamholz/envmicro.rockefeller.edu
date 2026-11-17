@@ -1,94 +1,76 @@
 ---
 ---
 
-# Lab Website Template
+## About the lab
 
-[Lab Website Template](https://github.com/greenelab/lab-website-template) is an easy-to-use, flexible website template for [labs](https://www.greenelab.com/).
-Spend less time worrying about managing a website and citations, and more time running your lab.
+We study & engineer the roles of microbes in the global carbon cycle.
+Some projects in our group are motivated by engineering goals, aiming to build carbon negative technologies using autotrophic (CO₂-eating) microbes.
+Other projects are motivated by problems that arise in climate models, which need to predict the collective respiration (CO₂ production) by microbial communities in order to estimate future warming.
 
-{%
-  include button.html
-  type="docs"
-  link="https://greene-lab.gitbook.io/lab-website-template-docs"
-%}
-{%
-  include button.html
-  type="github"
-  text="On GitHub"
-  link="greenelab/lab-website-template"
-%}
+Because we are focused on microbial metabolism in natural settings, we also pursue basic questions in microbiology, systems biology, and ecology.
+If you have an interest in quantitative thinking, environmental systems, and/or microbial physiology and metabolism, [drop us a line]({{ "/join/" | relative_url }}).
+
+<div class="tags research-areas" aria-label="Rockefeller research areas">
+  <a class="tag" href="https://www.rockefeller.edu/research/research-areas-and-laboratories/#biochemistry-biophysics-chemical-biology-and-structural-biology">Biochemistry, Biophysics, Chemical Biology, and Structural Biology</a>
+  <a class="tag" href="https://www.rockefeller.edu/research/research-areas-and-laboratories/#genetics-and-genomics">Genetics and Genomics</a>
+  <a class="tag" href="https://www.rockefeller.edu/research/research-areas-and-laboratories/#immunology-virology-and-microbiology">Immunology, Virology, and Microbiology</a>
+  <a class="tag" href="https://www.rockefeller.edu/research/research-areas-and-laboratories/#organismal-biology-and-evolution">Organismal Biology and Evolution</a>
+  <a class="tag" href="https://www.rockefeller.edu/research/research-areas-and-laboratories/#physical-mathematical-and-computational-biology">Physical, Mathematical, and Computational Biology</a>
+</div>
 
 {% include section.html %}
 
-## Highlights
-
-{% capture text %}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+{% capture content %}
 
 {%
-  include button.html
-  link="research"
-  text="See our publications"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
+  include figure.html
+  image="images/gallery/millbrook-lab-trip.jpg"
+  caption="Lab trip to Millbrook, NY"
+%}
+
+{%
+  include figure.html
+  image="images/gallery/central-valley-cyanobacteria-sampling.jpg"
+  caption="Sampling for cyanobacteria in the Central Valley, CA"
+%}
+
+{%
+  include figure.html
+  image="images/gallery/bear-mountain-lab-hike.jpg"
+  caption="Lab hike to Bear Mountain"
+%}
+
+{%
+  include figure.html
+  image="images/gallery/field-center-sampling-2026-08.jpg"
+  caption="Sampling at the Field Center, August 2026"
+%}
+
+{%
+  include figure.html
+  image="images/gallery/nylittle-2026-group-retreat.jpg"
+  caption="Group retreat / NYLittle meeting 2026"
+%}
+
+{%
+  include figure.html
+  image="images/gallery/nylittle-2026-innisfree-garden.jpg"
+  caption="NYLittle 2026 at Innisfree Garden"
 %}
 
 {% endcapture %}
 
-{%
-  include feature.html
-  image="images/photo.jpg"
-  link="research"
-  title="Our Research"
-  text=text
-%}
+{% include grid.html style="gallery" content=content %}
 
-{% capture text %}
+{% include section.html %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+## Explore
 
-{%
-  include button.html
-  link="projects"
-  text="Browse our projects"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/photo.jpg"
-  link="projects"
-  title="Our Projects"
-  flip=true
-  style="bare"
-  text=text
-%}
-
-{% capture text %}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-{%
-  include button.html
-  link="team"
-  text="Meet our team"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/photo.jpg"
-  link="team"
-  title="Our Team"
-  text=text
-%}
+{% include button.html link="research/" text="Publications" icon="fa-solid fa-microscope" %}
+{% include button.html link="projects/" text="Projects" icon="fa-solid fa-wrench" %}
+{% include button.html link="team/" text="Team" icon="fa-solid fa-users" %}
+{% include button.html link="resources/" text="Resources" icon="fa-solid fa-toolbox" %}
+{% include button.html link="photos/" text="Lab photos" icon="fa-solid fa-camera" %}
+{% include button.html link="join/" text="Join us" icon="fa-solid fa-user-plus" %}
+{% include button.html link="news/" text="News" icon="fa-solid fa-newspaper" %}
+{:.center}

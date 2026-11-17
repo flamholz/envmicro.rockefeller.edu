@@ -32,4 +32,4 @@ Interested in joining us? See [Join us]({{ "/join/" | relative_url }}).
 
 ## Alumni
 
-{% include list.html data="members" component="portrait" filter="group == 'alum'" style="small" %}
+{% include list.html data="members" component="portrait" filter="group == 'alum'" %}

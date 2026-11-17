@@ -3,7 +3,6 @@ name: Avi I. Flamholz
 image: images/people/avi-flamholz.jpg
 role: principal-investigator
 description: Assistant Professor
-affiliation: The Rockefeller University
 aliases:
   - Avi Flamholz
   - Avi I. Flamholz

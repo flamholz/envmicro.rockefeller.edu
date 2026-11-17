@@ -2,8 +2,8 @@
 title: Laboratory of Environmental Microbiology
 subtitle: Flamholz Lab · The Rockefeller University
 description: We study and engineer the roles of microbes in the global carbon cycle, from CO₂-eating autotrophs to the collective respiration of microbial communities.
-header: images/gallery/field-center-sampling-2026-08.jpg
-footer: images/gallery/field-center-sampling-2026-08.jpg
+header: images/gallery/millbrook-lab-trip.jpg
+footer: images/gallery/millbrook-lab-trip.jpg
 # html-proofer runs as a separate step (scripts/check-links.sh), not on every build
 proofer: false
 

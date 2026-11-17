@@ -1,0 +1,22 @@
+{% comment %}
+  Responsive, privacy-enhanced YouTube embed (youtube-nocookie.com).
+  Usage: {% include embed.html youtube="VIDEO_ID" title="Video title" %}
+{% endcomment %}
+
+<figure class="embed">
+  <div class="embed-frame">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/{{ include.youtube | uri_escape }}?rel=0"
+      title="{{ include.title | default: "Embedded video" | xml_escape }}"
+      loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+  {% if include.title %}
+    <figcaption class="embed-caption">
+      <a href="https://www.youtube.com/watch?v={{ include.youtube | uri_escape }}">{{ include.title }}</a>
+    </figcaption>
+  {% endif %}
+</figure>

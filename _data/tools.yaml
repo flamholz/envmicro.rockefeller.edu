@@ -1,0 +1,35 @@
+# Web tools listed on the Resources page (card list).
+
+- title: BioNumbers
+  link: https://bionumbers.hms.harvard.edu/search.aspx
+  image: images/resources/bionumbers.svg
+  description: >-
+    A compendium of quantitative values regarding biological molecules, cells,
+    and organisms. Ongoing maintenance and curation by the
+    [Milo lab](https://www.weizmann.ac.il/lsc/lab/prof-ron-milo) at WIS;
+    we contribute numbers and use the site routinely.
+
+- title: eQuilibrator
+  link: https://equilibrator.weizmann.ac.il/
+  image: images/resources/equilibrator.svg
+  description: >-
+    An online tool for calculating thermodynamic potentials of biochemical
+    reactions using free-text search. Development ongoing with Elad Noor and
+    Moritz Beber.
+
+- title: Classic Reactions
+  link: http://equilibrator.weizmann.ac.il/static/classic_rxns/classic_reactions/index.html
+  image: images/resources/classic-reactions.svg
+  description: >-
+    A primer on metabolism from a thermodynamic perspective. Housed on
+    eQuilibrator and written with help from Elad Noor, Noam Prywes, Dave Savage
+    and Ron Milo.
+
+- title: Human Impacts Database
+  link: http://www.anthroponumbers.org/catalog/
+  image: images/resources/human-impacts-database.svg
+  description: >-
+    Developed primarily by [Griffin Chure](https://gchure.github.io/) as part
+    of the Human Impacts project in
+    [Rob Phillips' group](https://www.rpgroup.caltech.edu/), which we
+    contribute to.
