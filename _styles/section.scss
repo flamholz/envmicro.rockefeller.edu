@@ -9,6 +9,12 @@ section {
   transition: background var(--transition), color var(--transition);
 }
 
+// the section padding already spaces the first heading; dropping its own top
+// margin halves the whitespace above each section's heading (80px -> 40px)
+section > :first-child {
+  margin-top: 0;
+}
+
 section[data-size="wide"] {
   padding: $padding;
 }
