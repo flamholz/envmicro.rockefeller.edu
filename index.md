@@ -1,15 +1,6 @@
 ---
 ---
 
-<p class="center">
-  <img
-    class="lab-logo"
-    src="{{ "/images/logo/lem-logo.png" | relative_url }}"
-    alt="Laboratory of Environmental Microbiology logo: a globe ringed by CO₂ cycle arrows"
-    width="280"
-  >
-</p>
-
 ## About the lab
 
 We study & engineer the roles of microbes in the global carbon cycle.
