@@ -12,7 +12,7 @@ url: "https://envmicro.rockefeller.edu"
 baseurl: ""
 
 # lab contact details shown in the footer (address only; phone and email are
-# deliberately not published site-wide; the Join page shows the email in obfuscated form)
+# deliberately not published site-wide; the Contact page shows the email in obfuscated form)
 contact:
   name: Avi Flamholz
   address:

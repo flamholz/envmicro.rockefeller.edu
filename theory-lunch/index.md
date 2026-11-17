@@ -18,7 +18,7 @@ Food is provided.
 Come learn how people think in different fields, get to know your colleagues, and potentially uncover resonances with your own research.
 We definitely took inspiration from the [Theory Lunch series](https://sysbio.med.harvard.edu/theorylunch) that [Jeremy Gunawardena](https://vcp.upf.edu/) previously ran at Harvard.
 
-If you're in the NYC area and you'd like to join or present at an upcoming meeting, please [write to me]({{ "/join/#contact" | relative_url }}).
+If you're in the NYC area and you'd like to join or present at an upcoming meeting, please [write to me]({{ "/contact/#email" | relative_url }}).
 
 <div class="photo-frame">
 {%

@@ -8,7 +8,7 @@ Some projects in our group are motivated by engineering goals, aiming to build c
 Other projects are motivated by problems that arise in climate models, which need to predict the collective respiration (CO₂ production) by microbial communities in order to estimate future warming.
 
 Because we are focused on microbial metabolism in natural settings, we also pursue basic questions in microbiology, systems biology, and ecology.
-If you have an interest in quantitative thinking, environmental systems, and/or microbial physiology and metabolism, [drop us a line]({{ "/join/" | relative_url }}).
+If you have an interest in quantitative thinking, environmental systems, and/or microbial physiology and metabolism, [drop us a line]({{ "/contact/" | relative_url }}).
 
 <div class="photo-frame photo-frame-wide">
 {%
@@ -67,5 +67,5 @@ If you have an interest in quantitative thinking, environmental systems, and/or 
 {% include button.html link="photos/" text="Lab photos" icon="fa-solid fa-camera" %}
 {% include button.html link="news/" text="News" icon="fa-solid fa-newspaper" %}
 {% include button.html link="theory-lunch/" text="Theory Lunch" icon="fa-solid fa-chalkboard-user" %}
-{% include button.html link="join/" text="Join us" icon="fa-solid fa-user-plus" %}
+{% include button.html link="contact/" text="Contact" icon="fa-solid fa-envelope" %}
 {:.center}

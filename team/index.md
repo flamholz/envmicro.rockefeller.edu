@@ -7,7 +7,7 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %}Team
 
-Interested in joining us? See [Join us]({{ "/join/" | relative_url }}).
+Interested in joining us? See [Contact]({{ "/contact/" | relative_url }}).
 
 {% include section.html %}
 
