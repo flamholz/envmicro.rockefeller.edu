@@ -52,3 +52,20 @@ $one: 500px;
 .grid > :where(h1, h2, h3, h4, h5, h6) {
   display: none;
 }
+
+// two wide cards per row (tool cards on Resources); one on phones
+.grid[data-style="cols-2"] {
+  --repeat: 2;
+}
+
+@media (max-width: $one) {
+  .grid[data-style="cols-2"] {
+    --repeat: 1;
+  }
+}
+
+// tool logo tiles are 3:1 (900x300); show them at their own shape
+.grid[data-style="cols-2"] .card-image img {
+  aspect-ratio: 3 / 1;
+  object-fit: cover;
+}

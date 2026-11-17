@@ -2,18 +2,10 @@
 title: Resources
 nav:
   order: 3
-  tooltip: Tools, seminars and videos
+  tooltip: Seminars, tools and videos
 ---
 
 # {% include icon.html icon="fa-solid fa-toolbox" %}Resources
-
-{% include section.html %}
-
-## Tools
-
-Useful online resources.
-
-{% include list.html component="card" data="tools" %}
 
 {% include section.html %}
 
@@ -22,6 +14,15 @@ Useful online resources.
 - [Rockefeller Physics & Biology Seminar](https://www.rockefeller.edu/research/interdisciplinary-centers/center-studies-physics-biology/seminars/) — a weekly seminar at the intersection of physics and biology at Rockefeller University. We are frequent hosts.
 - [Tri-I Theory Lunch]({{ "/theory-lunch/" | relative_url }}) — a monthly lunchtime chalk talk emphasizing concepts in biology, co-hosted with [Ed Reznik at MSKCC](https://www.mskcc.org/research-areas/labs/ed-reznik). Food is provided.
 - [CUNY / Princeton Biological Physics Symposia](https://biophysics.princeton.edu/events/biophysics-symposia) — local biological physics symposia hosted by Bill Bialek at the CUNY Graduate Center.
+- [Cary Institute Scientific Seminars](https://www.caryinstitute.org/science/scientific-seminars) — ecosystem science seminars at the Cary Institute of Ecosystem Studies in Millbrook, NY, held in person and streamed. Past talks are on [YouTube](https://www.youtube.com/playlist?list=PLWoFuak18FGWvSQjpo5nLAOTVd9udIMfh).
+
+{% include section.html %}
+
+## Tools
+
+<div class="grid" data-style="cols-2">
+{% include list.html component="card" data="tools" %}
+</div>
 
 {% include section.html %}
 

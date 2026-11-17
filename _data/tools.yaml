@@ -1,5 +1,6 @@
 # Web tools listed on the Resources page (card list).
-# Tiles are 3:2 PNGs (900x600): the site's own logo centered on white.
+# Tiles are 3:1 PNGs (900x300): the site's own logo centered on white,
+# fit within 640x220 (the Resources grid shows them at 3:1).
 # Human Impacts has no logo, so its tile is a text tile in its navbar style.
 
 - title: BioNumbers
@@ -8,7 +9,7 @@
   description: >-
     A compendium of quantitative values regarding biological molecules, cells,
     and organisms. Ongoing maintenance and curation by the
-    [Milo lab](https://www.weizmann.ac.il/lsc/lab/prof-ron-milo) at WIS;
+    [Milo lab](https://www.weizmann.ac.il/plants/milo/) at WIS;
     we contribute numbers and use the site routinely.
 
 - title: eQuilibrator
@@ -16,22 +17,24 @@
   image: images/resources/equilibrator.png
   description: >-
     An online tool for calculating thermodynamic potentials of biochemical
-    reactions using free-text search. Development ongoing with Elad Noor and
-    Moritz Beber.
+    reactions using free-text search. Ongoing development and maintenance
+    by [Elad Noor](https://scholar.google.com/citations?user=E4UymDMAAAAJ&hl=en) and
+    [Moritz Beber](https://github.com/Midnighter).
 
 - title: Classic Reactions
   link: http://equilibrator.weizmann.ac.il/static/classic_rxns/classic_reactions/index.html
   image: images/resources/classic-reactions.png
   description: >-
     A primer on metabolism from a thermodynamic perspective. Housed on
-    eQuilibrator and written with help from Elad Noor, Noam Prywes, Dave Savage
-    and Ron Milo.
+    eQuilibrator and written with help from [Elad Noor](https://scholar.google.com/citations?user=E4UymDMAAAAJ&hl=en),
+    [Noam Prywes](https://pryweslab.org/),
+    [Dave Savage](https://www.savagelab.org/) and
+    [Ron Milo](https://www.weizmann.ac.il/plants/milo/).
 
 - title: Human Impacts Database
   link: http://www.anthroponumbers.org/catalog/
   image: images/resources/human-impacts-database.png
   description: >-
+    A compendium of numbers regarding human impacts on the Earth.
     Developed primarily by [Griffin Chure](https://gchure.github.io/) as part
-    of the Human Impacts project in
-    [Rob Phillips' group](https://www.rpgroup.caltech.edu/), which we
-    contribute to.
+    of the Human Impacts project in [Rob Phillips' group](https://www.rpgroup.caltech.edu/).
