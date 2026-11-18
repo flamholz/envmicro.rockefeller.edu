@@ -21,7 +21,7 @@ Content was pulled from the old pages on 2026-11-17.
 | News item (Nov 21, 2024) | `_posts/2024-11-21-new-faculty-member.md`, listed at `/news/` |
 | (new) News items | Welcome posts for James (Feb 1, 2025), Sophia (May 15, 2025), Eden (Sep 15, 2025), Julie (Feb 17, 2026, which also announces her Women & Science Postdoctoral Fellowship, awarded Nov 2025) and Javi (Nov 16, 2026). Text is drawn from the Team bios |
 
-Top nav: Team · Projects · Resources · Publications · Photos · News · Theory Lunch · Contact (order set by `nav.order` in each page's front matter; the home page's Explore buttons follow the same order). The Publications page lives at `/research/` (it was titled "Research" until 2026-11-17; the URL was kept so existing links still work).
+Top nav: Team · Projects · Resources · Publications · Photos · News · Theory Lunch · Contact (order set by `nav.order` in each page's front matter; the home page had matching Explore buttons until 2026-11-18, now removed). The Publications page lives at `/research/` (it was titled "Research" until 2026-11-17; the URL was kept so existing links still work).
 
 ## Decisions and deviations from the brief
 
