@@ -1,0 +1,60 @@
+{% comment %}
+  Author list for a paper: include.authors (array). include.carve (default 5)
+  keeps that many names at each end and elides the middle.
+
+  lab site: bold lab members (current and alumni). An author matches a
+  member when first and last names agree, ignoring middle initials and
+  the equal-contribution star; members can list other spellings under
+  `aliases:` in their _members/ file. A member with `citation_name:`
+  is always shown under that name (keeping any star).
+{% endcomment %}
+{% assign carve = include.carve | default: 5 %}
+{% assign member_keys = "" | split: "," %}
+{% assign member_shown = "" | split: "," %}
+{% for member in site.members %}
+  {% assign shown_name = member.citation_name | default: "-" %}
+  {% assign parts = member.name | split: " " %}
+  {% assign key = parts.first | append: " " | append: parts.last %}
+  {% assign member_keys = member_keys | push: key %}
+  {% assign member_shown = member_shown | push: shown_name %}
+  {% for alias in member.aliases %}
+    {% assign parts = alias | split: " " %}
+    {% assign key = parts.first | append: " " | append: parts.last %}
+    {% assign member_keys = member_keys | push: key %}
+    {% assign member_shown = member_shown | push: shown_name %}
+  {% endfor %}
+{% endfor %}
+{% assign marked_authors = "" | split: "," %}
+{% for author in include.authors %}
+  {% assign parts = author | remove: "\*" | split: " " %}
+  {% assign key = parts.first | append: " " | append: parts.last %}
+  {% if member_keys contains key %}
+    {% assign display = author %}
+    {% for member_key in member_keys %}
+      {% if member_key == key %}
+        {% assign shown_name = member_shown[forloop.index0] %}
+        {% if shown_name != "-" %}
+          {% assign display = shown_name %}
+          {% if author contains "\*" %}
+            {% assign display = display | append: "\*" %}
+          {% endif %}
+        {% endif %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    {% assign marked = "<strong>" | append: display | append: "</strong>" %}
+  {% else %}
+    {% assign marked = author %}
+  {% endif %}
+  {% assign marked_authors = marked_authors | push: marked %}
+{% endfor %}
+{{
+  marked_authors
+  | join: ","
+  | split: ","
+  | array_carve: carve
+  | join: ", "
+  | markdownify
+  | remove: "<p>" | remove: "</p>"
+  | default: "[no author info]"
+}}

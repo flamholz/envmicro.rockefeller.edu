@@ -46,6 +46,11 @@ defaults:
       type: "posts"
     values:
       layout: post
+  # markdown files in /_papers (paper write-ups)
+  - scope:
+      type: "papers"
+    values:
+      layout: paper
 
 collections:
   # generate page for each member
@@ -54,6 +59,10 @@ collections:
   # generate page for each post
   posts:
     output: true
+  # generate a page for each paper write-up, at /publications/<file name>/
+  papers:
+    output: true
+    permalink: /publications/:name/
 
 # news posts live under /news/
 permalink: /news/:year/:month/:day/:title/

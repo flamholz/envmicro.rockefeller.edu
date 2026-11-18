@@ -1,79 +1,105 @@
-# Papers shown on the Research page.
+# Papers shown on the Publications page.
 # Add a paper by its DOI, then run scripts/build.sh (or `python _cite/cite.py`)
 # to regenerate _data/citations.yaml.
 #
-# `image:` is the thumbnail shown beside the paper: one panel cropped from a
-# figure in the paper (images/publications/, ~600px, author-year-topic.jpg).
+# Optional fields per paper (any field here overrides what Crossref returns):
 #
+# `image:` the square thumbnail beside the paper: one panel cropped from a
+#   figure (images/publications/, ~600px, author-year-topic.jpg).
 # `title:` overrides the title from Crossref where it has stray markup or line
-# breaks (e.g. <sub>2</sub>); write CO₂ / O₂ with Unicode subscripts.
+#   breaks (e.g. <sub>2</sub>); write CO₂ / O₂ with Unicode subscripts.
+# Write-ups: a paper with a file in _papers/ (matched by `doi:`) gets its own
+#   page at /publications/<file name>/, and its title and thumbnail on the
+#   Publications list link there. See _papers/ for the format.
 #
-# The research page shows one list per topic tag:
-#   metabolism    -> Microbial metabolism, physiology & communities
-#   co2-fixation  -> Microbial CO2 fixation & rubisco
-#   environment   -> Environmental analysis
-#   earlier       -> Earlier contributions
+# The Publications page shows one list per tag (each list is newest first):
+#   recent      -> Recent papers
+#   commentary  -> Commentary and framing
+#   other       -> Other contributions
 
-# --- Microbial metabolism, physiology & communities ---
+# --- Recent papers ---
 
 - id: doi:10.1073/pnas.2404048121
   image: images/publications/flamholz-2025-proteome-electron-acceptor.jpg
-  tags: [metabolism]
+  tags: [recent]
 
 - id: doi:10.1128/msystems.00763-24
   image: images/publications/flamholz-2024-o2-prediction.jpg
-  tags: [metabolism]
+  tags: [recent]
 
 - id: doi:10.1073/pnas.2309387120
   image: images/publications/goyal-2023-closed-ecosystems.jpg
-  tags: [metabolism]
+  tags: [recent]
 
 - id: doi:10.1128/mbio.02076-22
   image: images/publications/flamholz-2022-optical-o2-sensors.jpg
   title: "Optical O₂ Sensors Also Respond to Redox Active Molecules Commonly Secreted by Bacteria"
-  tags: [metabolism]
+  tags: [recent]
 
 - id: doi:10.1073/pnas.2110787119
   image: images/publications/goldford-2022-coenzyme-redundancy.jpg
-  tags: [metabolism]
-
-# --- Microbial CO2 fixation & rubisco ---
-
-- id: doi:10.1038/s41586-024-08455-0
-  image: images/publications/prywes-2025-rubisco-map.jpg
-  tags: [co2-fixation]
-
-- id: doi:10.1073/pnas.2300466120
-  image: images/publications/wang-2023-ancestral-rubisco-isotopes.jpg
-  title: "Carbon isotope fractionation by an ancestral rubisco suggests that biological proxies for CO₂ through geologic time should be reevaluated"
-  tags: [co2-fixation]
+  tags: [recent]
 
 - id: doi:10.1073/pnas.2210539119
   image: images/publications/flamholz-2022-ccm-trajectories.jpg
   title: "Trajectories for the evolution of bacterial CO₂-concentrating mechanisms"
-  tags: [co2-fixation]
+  tags: [recent]
 
 - id: doi:10.7554/eLife.59882
   image: images/publications/flamholz-2020-ccm-reconstitution.jpg
   title: "Functional reconstitution of a bacterial CO₂ concentrating mechanism in Escherichia coli"
-  tags: [co2-fixation]
-
-# --- Environmental analysis ---
-
-- id: doi:10.1038/s41587-025-02632-w
-  image: images/publications/lovat-2025-electro-microbial.jpg
-  tags: [environment]
+  tags: [recent]
 
 - id: doi:10.1073/pnas.2404329122
   image: images/publications/eshel-2025-grass-fed-beef.jpg
-  tags: [environment]
+  tags: [recent]
 
-# --- Earlier contributions ---
+# --- Commentary and framing ---
+
+- id: doi:10.1016/j.tim.2023.06.003
+  image: images/publications/flamholz-2023-supply-demand.jpg
+  tags: [commentary]
+
+- id: doi:10.1016/j.cub.2022.02.002
+  image: images/publications/flamholz-2022-metabolic-rate-trait.jpg
+  tags: [commentary]
+
+- id: doi:10.1016/j.cub.2020.01.076
+  image: images/publications/flamholz-2020-photosynthesis-geologic-time.jpg
+  tags: [commentary]
+
+- id: doi:10.1091/mbc.e14-09-1347
+  image: images/publications/flamholz-2014-quantified-cell.jpg
+  tags: [commentary]
+
+- id: doi:10.1016/j.febslet.2013.07.028
+  tags: [commentary]
+
+- id: doi:10.1038/nchembio.971
+  image: images/publications/bar-even-2012-rethinking-glycolysis.jpg
+  tags: [commentary]
+
+# --- Other contributions ---
+
+- id: doi:10.1038/s41587-025-02632-w
+  image: images/publications/lovat-2025-electro-microbial.jpg
+  tags: [other]
+
+- id: doi:10.1038/s41586-024-08455-0
+  image: images/publications/prywes-2025-rubisco-map.jpg
+  tags: [other]
+
+- id: doi:10.1073/pnas.2300466120
+  image: images/publications/wang-2023-ancestral-rubisco-isotopes.jpg
+  title: "Carbon isotope fractionation by an ancestral rubisco suggests that biological proxies for CO₂ through geologic time should be reevaluated"
+  tags: [other]
 
 - id: doi:10.1073/pnas.1215283110
-  tags: [earlier]
+  image: images/publications/flamholz-2013-glycolytic-strategy.jpg
+  tags: [other]
 
 - id: doi:10.1073/pnas.1525145113
+  image: images/publications/mangan-2016-ccm-ph.jpg
   # title cleaned up (Crossref's has stray markup around CO2);
   # \* marks equal contribution (escaped so markdown doesn't italicize)
   title: pH determines the energetic efficiency of the cyanobacterial CO₂ concentrating mechanism
@@ -83,7 +109,7 @@
     - Rachel D. Hood
     - Ron Milo
     - David F. Savage
-  tags: [earlier]
+  tags: [other]
 
 - id: doi:10.1093/nar/gkr874
   image: images/publications/flamholz-2012-equilibrator.jpg
@@ -94,17 +120,13 @@
     - Elad Noor
     - Arren Bar-Even
     - Ron Milo
-  tags: [earlier]
-
-- id: doi:10.1016/j.cub.2020.01.076
-  image: images/publications/flamholz-2020-photosynthesis-geologic-time.jpg
-  tags: [earlier]
+  tags: [other]
 
 - id: doi:10.1038/s41564-019-0520-8
   image: images/publications/desmarais-2019-dabs.jpg
-  tags: [earlier]
+  tags: [other]
 
 - id: doi:10.1021/acs.biochem.9b00237
   image: images/publications/flamholz-2019-rubisco-tradeoffs.jpg
   title: "Revisiting Trade-offs between Rubisco Kinetic Parameters"
-  tags: [earlier]
+  tags: [other]

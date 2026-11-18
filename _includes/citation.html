@@ -8,13 +8,25 @@
   {% assign citation = include %}
 {% endif %}
 
+{% comment %}
+  lab site: a paper with a write-up in _papers/ (matched by DOI) links its
+  title and thumbnail to that page; the DOI still links to the paper itself
+{% endcomment %}
+{% assign doi = citation.id | remove_first: "doi:" %}
+{% assign paper_page = site.papers | where: "doi", doi | first %}
+{% if paper_page %}
+  {% assign title_link = paper_page.url | relative_url %}
+{% else %}
+  {% assign title_link = citation.link | relative_url %}
+{% endif %}
+
 <div class="citation-container">
   <div class="citation">
     {% comment %} lab site: no thumbnail box for papers without an image {% endcomment %}
     {% if include.style == "rich" and citation.image %}
       <a
-        {% if citation.link %}
-          href="{{ citation.link | relative_url | uri_escape }}"
+        {% if title_link %}
+          href="{{ title_link | uri_escape }}"
         {% endif %}
         class="citation-image"
         aria-label="{{ citation.title | default: "citation link" | regex_strip }}"
@@ -33,8 +45,8 @@
       {% include icon.html icon=type.icon %}
 
       <a
-        {% if citation.link %}
-          href="{{ citation.link | relative_url | xml_escape }}"
+        {% if title_link %}
+          href="{{ title_link | xml_escape }}"
         {% endif %}
         class="citation-title"
       >
@@ -48,62 +60,7 @@
         {% endif %}
         tabindex="0"
       >
-        {% comment %}
-          lab site: bold lab members (current and alumni). An author matches a
-          member when first and last names agree, ignoring middle initials and
-          the equal-contribution star; members can list other spellings under
-          `aliases:` in their _members/ file. A member with `citation_name:`
-          is always shown under that name (keeping any star).
-        {% endcomment %}
-        {% assign member_keys = "" | split: "," %}
-        {% assign member_shown = "" | split: "," %}
-        {% for member in site.members %}
-          {% assign shown_name = member.citation_name | default: "-" %}
-          {% assign parts = member.name | split: " " %}
-          {% assign key = parts.first | append: " " | append: parts.last %}
-          {% assign member_keys = member_keys | push: key %}
-          {% assign member_shown = member_shown | push: shown_name %}
-          {% for alias in member.aliases %}
-            {% assign parts = alias | split: " " %}
-            {% assign key = parts.first | append: " " | append: parts.last %}
-            {% assign member_keys = member_keys | push: key %}
-            {% assign member_shown = member_shown | push: shown_name %}
-          {% endfor %}
-        {% endfor %}
-        {% assign marked_authors = "" | split: "," %}
-        {% for author in citation.authors %}
-          {% assign parts = author | remove: "\*" | split: " " %}
-          {% assign key = parts.first | append: " " | append: parts.last %}
-          {% if member_keys contains key %}
-            {% assign display = author %}
-            {% for member_key in member_keys %}
-              {% if member_key == key %}
-                {% assign shown_name = member_shown[forloop.index0] %}
-                {% if shown_name != "-" %}
-                  {% assign display = shown_name %}
-                  {% if author contains "\*" %}
-                    {% assign display = display | append: "\*" %}
-                  {% endif %}
-                {% endif %}
-                {% break %}
-              {% endif %}
-            {% endfor %}
-            {% assign marked = "<strong>" | append: display | append: "</strong>" %}
-          {% else %}
-            {% assign marked = author %}
-          {% endif %}
-          {% assign marked_authors = marked_authors | push: marked %}
-        {% endfor %}
-        {{
-          marked_authors
-          | join: ","
-          | split: ","
-          | array_carve: 5
-          | join: ", "
-          | markdownify
-          | remove: "<p>" | remove: "</p>"
-          | default: "[no author info]"
-        }}
+        {% include citation-authors.html authors=citation.authors %}
       </div>
 
       <div class="citation-details">
@@ -115,20 +72,22 @@
           {{- citation.date | default: "[no date info]" | date: "%d %b %Y" -}}
         </span>
         &nbsp;·&nbsp;
-        <span class="citation-id">
-          {{- citation.id | default: "[no id info]" -}}
-        </span>
+        {% if paper_page and citation.link %}
+          <a class="citation-id" href="{{ citation.link | xml_escape }}">
+            {{- citation.id -}}
+          </a>
+        {% else %}
+          <span class="citation-id">
+            {{- citation.id | default: "[no id info]" -}}
+          </span>
+        {% endif %}
       </div>
 
       {% if include.style == "rich" %}
-        {% if citation.description %}
+        {% assign teaser = paper_page.description | default: citation.description %}
+        {% if teaser %}
           <div class="citation-description">
-            {{
-              citation.description
-              | markdownify
-              | remove: "<p>"
-              | remove: "</p>"
-            }}
+            {{ teaser | markdownify | remove: "<p>" | remove: "</p>" }}
           </div>
         {% endif %}
 

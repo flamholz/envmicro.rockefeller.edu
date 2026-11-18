@@ -1,8 +1,9 @@
 ---
 title: Publications
+redirect_from: /research/
 nav:
   order: 4
-  tooltip: Publications by topic
+  tooltip: Recent papers, commentary and more
 ---
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Publications
@@ -20,24 +21,18 @@ nav:
 
 {% include section.html %}
 
-## Microbial metabolism, physiology & communities
+## Recent papers
 
-{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('metabolism')" %}
-
-{% include section.html %}
-
-## Microbial CO₂ fixation & rubisco
-
-{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('co2-fixation')" %}
+{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('recent')" %}
 
 {% include section.html %}
 
-## Environmental analysis
+## Commentary and framing
 
-{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('environment')" %}
+{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('commentary')" %}
 
 {% include section.html %}
 
-## Earlier contributions
+## Other contributions
 
-{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('earlier')" %}
+{% include list.html data="citations" component="citation" style="rich" hide_years=true filter="tags && tags.include?('other')" %}

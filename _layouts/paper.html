@@ -1,0 +1,76 @@
+---
+layout: default
+---
+
+{% comment %}
+  lab site: a paper write-up from _papers/. Citation details (authors,
+  journal, date, link, thumbnail) come from _data/citations.yaml, matched by
+  the page's `doi:`; the page itself holds the teaser (`description:`), an
+  optional figure (`image:`, `image_alt:`, `image_credit:`) and the write-up.
+{% endcomment %}
+
+{% assign citation_id = "doi:" | append: page.doi %}
+{% assign citation = site.data.citations | where: "id", citation_id | first %}
+{% assign figure = page.image | default: citation.image %}
+
+{% include section.html %}
+
+<div class="paper-header">
+  <p class="paper-kicker">
+    <a href="{{ "/publications/" | relative_url }}">Publications</a>
+  </p>
+
+  <h1 class="paper-title">{{ citation.title | default: page.title }}</h1>
+
+  <div class="paper-authors">
+    {% include citation-authors.html authors=citation.authors carve=1000 %}
+  </div>
+
+  <div class="paper-details">
+    <span class="citation-publisher">{{ citation.publisher }}</span>
+    &nbsp;·&nbsp;
+    <span>{{ citation.date | date: "%-d %B %Y" }}</span>
+  </div>
+
+  {% if citation.link %}
+    <div class="paper-buttons">
+      {%
+        include button.html
+        link=citation.link
+        text="Read the paper"
+        icon="fa-solid fa-arrow-up-right-from-square"
+        flip=true
+      %}
+    </div>
+  {% endif %}
+</div>
+
+{% include section.html %}
+
+<div class="paper-body">
+  {% if figure %}
+    <figure class="paper-figure">
+      <img
+        src="{{ figure | relative_url | uri_escape }}"
+        alt="{{ page.image_alt | default: citation.title | regex_strip }}"
+      >
+      {% if page.image_credit %}
+        <figcaption>
+          {{ page.image_credit | markdownify | remove: "<p>" | remove: "</p>" }}
+        </figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
+
+  {{ content }}
+</div>
+
+<p class="center paper-back">
+  {%
+    include button.html
+    link="publications/"
+    text="All publications"
+    icon="fa-solid fa-arrow-left"
+    style="bare"
+  %}
+</p>

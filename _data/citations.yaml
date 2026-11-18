@@ -13,7 +13,7 @@
   link: https://doi.org/hcsrjj
   image: images/publications/flamholz-2025-proteome-electron-acceptor.jpg
   tags:
-  - metabolism
+  - recent
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1128/msystems.00763-24
@@ -31,7 +31,7 @@
   link: https://doi.org/hcsrjk
   image: images/publications/flamholz-2024-o2-prediction.jpg
   tags:
-  - metabolism
+  - recent
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1073/pnas.2309387120
@@ -46,7 +46,7 @@
   link: https://doi.org/hcsrjm
   image: images/publications/goyal-2023-closed-ecosystems.jpg
   tags:
-  - metabolism
+  - recent
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1128/mbio.02076-22
@@ -62,7 +62,7 @@
   link: https://doi.org/hcsrjn
   image: images/publications/flamholz-2022-optical-o2-sensors.jpg
   tags:
-  - metabolism
+  - recent
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1073/pnas.2110787119
@@ -77,7 +77,170 @@
   link: https://doi.org/hcsrjp
   image: images/publications/goldford-2022-coenzyme-redundancy.jpg
   tags:
-  - metabolism
+  - recent
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1073/pnas.2210539119
+  title: "Trajectories for the evolution of bacterial CO\u2082-concentrating mechanisms"
+  authors:
+  - Avi I. Flamholz
+  - Eli Dugan
+  - Justin Panich
+  - John J. Desmarais
+  - Luke M. Oltrogge
+  - Woodward W. Fischer
+  - Steven W. Singer
+  - David F. Savage
+  publisher: Proceedings of the National Academy of Sciences
+  date: '2022-12-01'
+  link: https://doi.org/grqcmf
+  image: images/publications/flamholz-2022-ccm-trajectories.jpg
+  tags:
+  - recent
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.7554/eLife.59882
+  title: "Functional reconstitution of a bacterial CO\u2082 concentrating mechanism\
+    \ in Escherichia coli"
+  authors:
+  - Avi I Flamholz
+  - Eli Dugan
+  - Cecilia Blikstad
+  - Shmuel Gleizer
+  - Roee Ben-Nissan
+  - Shira Amram
+  - Niv Antonovsky
+  - Sumedha Ravishankar
+  - Elad Noor
+  - Arren Bar-Even
+  - Ron Milo
+  - David F Savage
+  publisher: eLife
+  date: '2020-10-21'
+  link: https://doi.org/ghgfjq
+  image: images/publications/flamholz-2020-ccm-reconstitution.jpg
+  tags:
+  - recent
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1073/pnas.2404329122
+  title: "US grass-fed beef is as carbon intensive as industrial beef and \u224810-fold\
+    \ more intensive than common protein-dense alternatives"
+  authors:
+  - Gidon Eshel
+  - Avi I. Flamholz
+  - Alon Shepon
+  - Ron Milo
+  publisher: Proceedings of the National Academy of Sciences
+  date: '2025-03-17'
+  link: https://doi.org/g88rcn
+  image: images/publications/eshel-2025-grass-fed-beef.jpg
+  tags:
+  - recent
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.tim.2023.06.003
+  title: Matching metabolic supply to demand optimizes microbial growth
+  authors:
+  - Avi I. Flamholz
+  - Akshit Goyal
+  publisher: Trends in Microbiology
+  date: '2023-08-01'
+  link: https://doi.org/hcs4n6
+  image: images/publications/flamholz-2023-supply-demand.jpg
+  tags:
+  - commentary
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.cub.2022.02.002
+  title: 'Microbial communities: The metabolic rate is the trait'
+  authors:
+  - Avi I. Flamholz
+  - Dianne K. Newman
+  publisher: Current Biology
+  date: '2022-03-01'
+  link: https://doi.org/grkzj2
+  image: images/publications/flamholz-2022-metabolic-rate-trait.jpg
+  tags:
+  - commentary
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.cub.2020.01.076
+  title: Cell biology of photosynthesis over geologic time
+  authors:
+  - Avi Flamholz
+  - Patrick M. Shih
+  publisher: Current Biology
+  date: '2020-05-01'
+  link: https://doi.org/ggwk97
+  image: images/publications/flamholz-2020-photosynthesis-geologic-time.jpg
+  tags:
+  - commentary
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1091/mbc.e14-09-1347
+  title: The quantified cell
+  authors:
+  - Avi Flamholz
+  - Rob Phillips
+  - Ron Milo
+  publisher: Molecular Biology of the Cell
+  date: '2014-11-05'
+  link: https://doi.org/gfw82p
+  image: images/publications/flamholz-2014-quantified-cell.jpg
+  tags:
+  - commentary
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.febslet.2013.07.028
+  title: 'A note on the kinetics of enzyme action: A decomposition that highlights
+    thermodynamic effects'
+  authors:
+  - Elad Noor
+  - Avi Flamholz
+  - Wolfram Liebermeister
+  - Arren Bar-Even
+  - Ron Milo
+  publisher: FEBS Letters
+  date: '2013-07-23'
+  link: https://doi.org/f49hhs
+  tags:
+  - commentary
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1038/nchembio.971
+  title: 'Rethinking glycolysis: on the biochemical logic of metabolic pathways'
+  authors:
+  - Arren Bar-Even
+  - Avi Flamholz
+  - Elad Noor
+  - Ron Milo
+  publisher: Nature Chemical Biology
+  date: '2012-05-17'
+  link: https://doi.org/f3zf25
+  image: images/publications/bar-even-2012-rethinking-glycolysis.jpg
+  tags:
+  - commentary
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1038/s41587-025-02632-w
+  title: Electro-microbial production techno-economic viability and environmental
+    implications
+  authors:
+  - Samuel J. Lovat
+  - Roee Ben-Nissan
+  - Eliya Milshtein
+  - Asaf Tzachor
+  - Avi Flamholz
+  - Dorian Leger
+  - Elad Noor
+  - Ron Milo
+  publisher: Nature Biotechnology
+  date: '2025-04-22'
+  link: https://doi.org/hcsrjr
+  image: images/publications/lovat-2025-electro-microbial.jpg
+  tags:
+  - other
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1038/s41586-024-08455-0
@@ -109,7 +272,7 @@
   link: https://doi.org/g84qwk
   image: images/publications/prywes-2025-rubisco-map.jpg
   tags:
-  - co2-fixation
+  - other
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1073/pnas.2300466120
@@ -131,86 +294,7 @@
   link: https://doi.org/hcsrjq
   image: images/publications/wang-2023-ancestral-rubisco-isotopes.jpg
   tags:
-  - co2-fixation
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.1073/pnas.2210539119
-  title: "Trajectories for the evolution of bacterial CO\u2082-concentrating mechanisms"
-  authors:
-  - Avi I. Flamholz
-  - Eli Dugan
-  - Justin Panich
-  - John J. Desmarais
-  - Luke M. Oltrogge
-  - Woodward W. Fischer
-  - Steven W. Singer
-  - David F. Savage
-  publisher: Proceedings of the National Academy of Sciences
-  date: '2022-12-01'
-  link: https://doi.org/grqcmf
-  image: images/publications/flamholz-2022-ccm-trajectories.jpg
-  tags:
-  - co2-fixation
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.7554/eLife.59882
-  title: "Functional reconstitution of a bacterial CO\u2082 concentrating mechanism\
-    \ in Escherichia coli"
-  authors:
-  - Avi I Flamholz
-  - Eli Dugan
-  - Cecilia Blikstad
-  - Shmuel Gleizer
-  - Roee Ben-Nissan
-  - Shira Amram
-  - Niv Antonovsky
-  - Sumedha Ravishankar
-  - Elad Noor
-  - Arren Bar-Even
-  - Ron Milo
-  - David F Savage
-  publisher: eLife
-  date: '2020-10-21'
-  link: https://doi.org/ghgfjq
-  image: images/publications/flamholz-2020-ccm-reconstitution.jpg
-  tags:
-  - co2-fixation
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.1038/s41587-025-02632-w
-  title: Electro-microbial production techno-economic viability and environmental
-    implications
-  authors:
-  - Samuel J. Lovat
-  - Roee Ben-Nissan
-  - Eliya Milshtein
-  - Asaf Tzachor
-  - Avi Flamholz
-  - Dorian Leger
-  - Elad Noor
-  - Ron Milo
-  publisher: Nature Biotechnology
-  date: '2025-04-22'
-  link: https://doi.org/hcsrjr
-  image: images/publications/lovat-2025-electro-microbial.jpg
-  tags:
-  - environment
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.1073/pnas.2404329122
-  title: "US grass-fed beef is as carbon intensive as industrial beef and \u224810-fold\
-    \ more intensive than common protein-dense alternatives"
-  authors:
-  - Gidon Eshel
-  - Avi I. Flamholz
-  - Alon Shepon
-  - Ron Milo
-  publisher: Proceedings of the National Academy of Sciences
-  date: '2025-03-17'
-  link: https://doi.org/g88rcn
-  image: images/publications/eshel-2025-grass-fed-beef.jpg
-  tags:
-  - environment
+  - other
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1073/pnas.1215283110
@@ -224,8 +308,9 @@
   publisher: Proceedings of the National Academy of Sciences
   date: '2013-04-29'
   link: https://doi.org/f436rw
+  image: images/publications/flamholz-2013-glycolytic-strategy.jpg
   tags:
-  - earlier
+  - other
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1073/pnas.1525145113
@@ -240,8 +325,9 @@
   publisher: Proceedings of the National Academy of Sciences
   date: '2016-08-22'
   link: https://doi.org/f84gsb
+  image: images/publications/mangan-2016-ccm-ph.jpg
   tags:
-  - earlier
+  - other
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1093/nar/gkr874
@@ -256,20 +342,7 @@
   link: https://doi.org/fts7xv
   image: images/publications/flamholz-2012-equilibrator.jpg
   tags:
-  - earlier
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.1016/j.cub.2020.01.076
-  title: Cell biology of photosynthesis over geologic time
-  authors:
-  - Avi Flamholz
-  - Patrick M. Shih
-  publisher: Current Biology
-  date: '2020-05-01'
-  link: https://doi.org/ggwk97
-  image: images/publications/flamholz-2020-photosynthesis-geologic-time.jpg
-  tags:
-  - earlier
+  - other
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1038/s41564-019-0520-8
@@ -291,7 +364,7 @@
   link: https://doi.org/grmtk7
   image: images/publications/desmarais-2019-dabs.jpg
   tags:
-  - earlier
+  - other
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1021/acs.biochem.9b00237
@@ -311,6 +384,6 @@
   link: https://doi.org/gnttrc
   image: images/publications/flamholz-2019-rubisco-tradeoffs.jpg
   tags:
-  - earlier
+  - other
   plugin: sources.py
   file: sources.yaml

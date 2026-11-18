@@ -20,6 +20,10 @@ $wrap: 800px;
 .citation-image {
   position: relative;
   width: $thumb-size;
+  // lab site: fixed square pinned to the top, so it stays put when a
+  // teaser makes the card taller
+  height: $thumb-size;
+  align-self: flex-start;
   flex-shrink: 0;
   // box-shadow: var(--shadow);
 }
@@ -99,5 +103,6 @@ $wrap: 800px;
   .citation-image {
     width: unset;
     height: $thumb-size;
+    align-self: stretch;
   }
 }

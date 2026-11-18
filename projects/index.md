@@ -49,7 +49,7 @@ You'll see that we integrate experimental, computational, and theoretical tools 
 
 {%
   include button.html
-  link="research/"
+  link="publications/"
   text="See our publications"
   icon="fa-solid fa-arrow-right"
   flip=true

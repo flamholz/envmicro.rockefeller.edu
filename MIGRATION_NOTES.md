@@ -11,7 +11,7 @@ Content was pulled from the old pages on 2026-11-17.
 | People: PI + 5 members | `_members/*.md`, shown on `team/index.md` (`/team/`); each person also gets a page at `/members/<name>/` |
 | People: Collaborators and Friends | "Collaborators and friends" list on `/team/` (text only, no member pages) |
 | People: Alums | `_members/*.md` with `group: alum`, shown in the "Alumni" section of `/team/` |
-| Publications (14 papers, 3 topics) | DOIs in `_data/sources.yaml` → `_data/citations.yaml` (generated) → three filtered lists on `research/index.md` (`/research/`) |
+| Publications (22 papers, 3 sections) | DOIs in `_data/sources.yaml` → `_data/citations.yaml` (generated) → three filtered lists (recent papers, commentary, other contributions) on `publications/index.md` (`/publications/`) |
 | Projects (5 items) | One heading per project in `projects/index.md` (`/projects/`), using the old page's one-line descriptions as headings, each followed by its example papers and a `TODO` comment where a paragraph can go. (An earlier version used LWT's image cards from `_data/projects.yaml`; replaced at your request on 2026-11-17 with this text-first layout.) |
 | Resources | `resources/index.md` (`/resources/`): tool cards (`_data/tools.yaml`), seminars list, video embeds |
 | Lab Photos (+ "Building the Lab" sub-gallery) | `photos/index.md` (`/photos/`) |
@@ -21,7 +21,7 @@ Content was pulled from the old pages on 2026-11-17.
 | News item (Nov 21, 2024) | `_posts/2024-11-21-new-faculty-member.md`, listed at `/news/` |
 | (new) News items | Welcome posts for James (Feb 1, 2025), Sophia (May 15, 2025), Eden (Sep 15, 2025), Julie (Feb 17, 2026, which also announces her Women & Science Postdoctoral Fellowship, awarded Nov 2025) and Javi (Nov 16, 2026). Text is drawn from the Team bios |
 
-Top nav: Team · Projects · Resources · Publications · Photos · News · Theory Lunch · Contact (order set by `nav.order` in each page's front matter; the home page had matching Explore buttons until 2026-11-18, now removed). The Publications page lives at `/research/` (it was titled "Research" until 2026-11-17; the URL was kept so existing links still work).
+Top nav: Team · Projects · Resources · Publications · Photos · News · Theory Lunch · Contact (order set by `nav.order` in each page's front matter; the home page had matching Explore buttons until 2026-11-18, now removed). The Publications page lives at `/publications/` (it was titled "Research" at `/research/` until 2026-11-17/18; `/research/` now redirects).
 
 ## Decisions and deviations from the brief
 
@@ -31,7 +31,7 @@ Top nav: Team · Projects · Resources · Publications · Photos · News · Theo
 - **Alumni** are member files with `group: alum`, which is LWT's convention. They get a member page with a neutral placeholder portrait (`images/people/placeholder.svg`). The past program is shown as `description` and the current position as `affiliation`.
 - **Photos is its own page.** The old Lab Photos page and the home carousel share only one photo (the 2026 Innisfree Garden shot), so they were not merged. The "Building the Lab" sub-gallery (12 captioned photos) was migrated into `/photos/` rather than linking to the old rockefeller.edu page. The album covers link to the Google Photos albums, as before.
 - **Videos.** LWT has no embed component. Its `jekyll-spaceship` plugin can turn a Markdown image of a YouTube URL into an iframe, but it uses `youtube.com` (not the privacy-enhanced `youtube-nocookie.com` the old site used) and a fixed height. I added a small responsive include, `_includes/embed.html` (styles in `_styles/embed.scss`). Usage: `{% include embed.html youtube="VIDEO_ID" title="…" %}`.
-- **Topic filtering.** Each source has `tags: [metabolism | co2-fixation | environment]`, and the Publications page (`research/index.md`) filters with `filter="tags && tags.include?('…')"`. LWT's list adds year subheadings within each topic.
+- **Section filtering.** Each source has `tags: [recent | commentary | other]` (recent papers, commentary and framing, other contributions), and the Publications page (`publications/index.md`) filters with `filter="tags && tags.include?('…')"`, newest first, without year subheadings (`hide_years=true`).
 - **Citation links** are the shortDOI URLs that Manubot generates (e.g. `https://doi.org/hcsrjj`), which redirect to the full DOI. During the cite step Manubot prints a `403` warning for a PubMed Central ID lookup; it is harmless, because the citations come from DOI metadata.
 - **Template pieces removed.** The demo members, posts and projects; `testbed.md`; the demo `contact/` page (its content now lives in the footer and on `/contact/`); the template's ORCID source (`_data/orcid.yaml`, which belonged to someone else); the committed citation cache; `CITATION.cff` and `CHANGELOG.md`; the issue and discussion templates; and **all of the template's GitHub workflows**. Those workflows deploy to GitHub Pages, or exist only to auto-commit `citations.yaml` around that deploy. The new `build.yaml` runs the citation step as part of every build instead.
 - **Small template fixes.** Post tag links pointed at `/blog`, so they now point at `/news/`. The member page's "posts" link was updated the same way. I added a `gallery` grid style (`_styles/gallery.scss`) and footer contact styles.
@@ -96,7 +96,9 @@ When someone leaves, add `group: alum`, a `description:` (their role and years i
 3. Commit both `sources.yaml` and `citations.yaml`.
 
 Optional fields that override or extend the generated citation: `title`, `date`, `link`, `image`, `description`, `buttons`.
-For a new topic, add a section and `list.html` call to `research/index.md` with a new tag.
+For a new section, add a heading and `list.html` call to `publications/index.md` with a new tag.
+
+To give a paper a write-up page, add `_papers/<author-year-topic>.md` with front matter `title:` (the paper title), `doi:` (exactly as in `sources.yaml`, without `doi:`), `description:` (one- or two-sentence teaser shown on the Publications list) and optionally `image:` / `image_alt:` / `image_credit:` (a figure shown on the page, e.g. from `images/publications/writeups/`). The Markdown body is the write-up. The page is published at `/publications/<file name>/`, uses `_layouts/paper.html` (citation details come from `_data/citations.yaml` by DOI), and the paper's title and thumbnail on the Publications list link to it.
 
 ### Add a news post
 
