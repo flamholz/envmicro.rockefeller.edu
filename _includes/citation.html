@@ -147,8 +147,12 @@
           </div>
         {% endif %}
 
-        {% if citation.tags.size > 0 or citation.repo %}
-          {% include tags.html tags=citation.tags repo=citation.repo %}
+        {% comment %}
+          lab site: citation tags only pick the Publications section a paper
+          appears in, so they aren't shown (a repo badge still is)
+        {% endcomment %}
+        {% if citation.repo %}
+          {% include tags.html repo=citation.repo %}
         {% endif %}
       {% endif %}
     </div>
