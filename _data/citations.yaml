@@ -50,8 +50,8 @@
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1128/mbio.02076-22
-  title: "Optical O\n                    <sub>2</sub>\n                    Sensors\
-    \ Also Respond to Redox Active Molecules Commonly Secreted by Bacteria"
+  title: "Optical O\u2082 Sensors Also Respond to Redox Active Molecules Commonly\
+    \ Secreted by Bacteria"
   authors:
   - Avi I. Flamholz
   - Samuel Saccomano
@@ -114,8 +114,7 @@
   file: sources.yaml
 - id: doi:10.1073/pnas.2300466120
   title: "Carbon isotope fractionation by an ancestral rubisco suggests that biological\
-    \ proxies for CO\n                    <sub>2</sub>\n                    through\
-    \ geologic time should be reevaluated"
+    \ proxies for CO\u2082 through geologic time should be reevaluated"
   authors:
   - "Ren\xE9e Z. Wang"
   - Robert J. Nichols
@@ -136,8 +135,7 @@
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1073/pnas.2210539119
-  title: "Trajectories for the evolution of bacterial CO\n                    <sub>2</sub>\n\
-    \                    -concentrating mechanisms"
+  title: "Trajectories for the evolution of bacterial CO\u2082-concentrating mechanisms"
   authors:
   - Avi I. Flamholz
   - Eli Dugan
@@ -156,8 +154,8 @@
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.7554/eLife.59882
-  title: Functional reconstitution of a bacterial CO2 concentrating mechanism in Escherichia
-    coli
+  title: "Functional reconstitution of a bacterial CO\u2082 concentrating mechanism\
+    \ in Escherichia coli"
   authors:
   - Avi I Flamholz
   - Eli Dugan
@@ -175,63 +173,6 @@
   date: '2020-10-21'
   link: https://doi.org/ghgfjq
   image: images/publications/flamholz-2020-ccm-reconstitution.jpg
-  tags:
-  - co2-fixation
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.1016/j.cub.2020.01.076
-  title: Cell biology of photosynthesis over geologic time
-  authors:
-  - Avi Flamholz
-  - Patrick M. Shih
-  publisher: Current Biology
-  date: '2020-05-01'
-  link: https://doi.org/ggwk97
-  image: images/publications/flamholz-2020-photosynthesis-geologic-time.jpg
-  tags:
-  - co2-fixation
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.1021/acs.biochem.9b00237
-  title: 'Revisiting Trade-offs
-
-    between Rubisco Kinetic Parameters'
-  authors:
-  - Avi I. Flamholz
-  - Noam Prywes
-  - Uri Moran
-  - Dan Davidi
-  - Yinon M. Bar-On
-  - Luke M. Oltrogge
-  - Rui Alves
-  - David Savage
-  - Ron Milo
-  publisher: Biochemistry
-  date: '2019-07-01'
-  link: https://doi.org/gnttrc
-  image: images/publications/flamholz-2019-rubisco-tradeoffs.jpg
-  tags:
-  - co2-fixation
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.1038/s41564-019-0520-8
-  title: DABs are inorganic carbon pumps found throughout prokaryotic phyla
-  authors:
-  - John J. Desmarais
-  - Avi I. Flamholz
-  - Cecilia Blikstad
-  - Eli J. Dugan
-  - Thomas G. Laughlin
-  - Luke M. Oltrogge
-  - Allen W. Chen
-  - Kelly Wetmore
-  - Spencer Diamond
-  - Joy Y. Wang
-  - David F. Savage
-  publisher: Nature Microbiology
-  date: '2019-08-12'
-  link: https://doi.org/grmtk7
-  image: images/publications/desmarais-2019-dabs.jpg
   tags:
   - co2-fixation
   plugin: sources.py
@@ -314,6 +255,61 @@
   date: '2011-11-07'
   link: https://doi.org/fts7xv
   image: images/publications/flamholz-2012-equilibrator.jpg
+  tags:
+  - earlier
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.cub.2020.01.076
+  title: Cell biology of photosynthesis over geologic time
+  authors:
+  - Avi Flamholz
+  - Patrick M. Shih
+  publisher: Current Biology
+  date: '2020-05-01'
+  link: https://doi.org/ggwk97
+  image: images/publications/flamholz-2020-photosynthesis-geologic-time.jpg
+  tags:
+  - earlier
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1038/s41564-019-0520-8
+  title: DABs are inorganic carbon pumps found throughout prokaryotic phyla
+  authors:
+  - John J. Desmarais
+  - Avi I. Flamholz
+  - Cecilia Blikstad
+  - Eli J. Dugan
+  - Thomas G. Laughlin
+  - Luke M. Oltrogge
+  - Allen W. Chen
+  - Kelly Wetmore
+  - Spencer Diamond
+  - Joy Y. Wang
+  - David F. Savage
+  publisher: Nature Microbiology
+  date: '2019-08-12'
+  link: https://doi.org/grmtk7
+  image: images/publications/desmarais-2019-dabs.jpg
+  tags:
+  - earlier
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1021/acs.biochem.9b00237
+  title: Revisiting Trade-offs between Rubisco Kinetic Parameters
+  authors:
+  - Avi I. Flamholz
+  - Noam Prywes
+  - Uri Moran
+  - Dan Davidi
+  - Yinon M. Bar-On
+  - Luke M. Oltrogge
+  - Rui Alves
+  - David Savage
+  - Ron Milo
+  publisher: Biochemistry
+  date: '2019-07-01'
+  link: https://doi.org/gnttrc
+  image: images/publications/flamholz-2019-rubisco-tradeoffs.jpg
   tags:
   - earlier
   plugin: sources.py

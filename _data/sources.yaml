@@ -5,6 +5,9 @@
 # `image:` is the thumbnail shown beside the paper: one panel cropped from a
 # figure in the paper (images/publications/, ~600px, author-year-topic.jpg).
 #
+# `title:` overrides the title from Crossref where it has stray markup or line
+# breaks (e.g. <sub>2</sub>); write CO₂ / O₂ with Unicode subscripts.
+#
 # The research page shows one list per topic tag:
 #   metabolism    -> Microbial metabolism, physiology & communities
 #   co2-fixation  -> Microbial CO2 fixation & rubisco
@@ -27,6 +30,7 @@
 
 - id: doi:10.1128/mbio.02076-22
   image: images/publications/flamholz-2022-optical-o2-sensors.jpg
+  title: "Optical O₂ Sensors Also Respond to Redox Active Molecules Commonly Secreted by Bacteria"
   tags: [metabolism]
 
 - id: doi:10.1073/pnas.2110787119
@@ -41,26 +45,17 @@
 
 - id: doi:10.1073/pnas.2300466120
   image: images/publications/wang-2023-ancestral-rubisco-isotopes.jpg
+  title: "Carbon isotope fractionation by an ancestral rubisco suggests that biological proxies for CO₂ through geologic time should be reevaluated"
   tags: [co2-fixation]
 
 - id: doi:10.1073/pnas.2210539119
   image: images/publications/flamholz-2022-ccm-trajectories.jpg
+  title: "Trajectories for the evolution of bacterial CO₂-concentrating mechanisms"
   tags: [co2-fixation]
 
 - id: doi:10.7554/eLife.59882
   image: images/publications/flamholz-2020-ccm-reconstitution.jpg
-  tags: [co2-fixation]
-
-- id: doi:10.1016/j.cub.2020.01.076
-  image: images/publications/flamholz-2020-photosynthesis-geologic-time.jpg
-  tags: [co2-fixation]
-
-- id: doi:10.1021/acs.biochem.9b00237
-  image: images/publications/flamholz-2019-rubisco-tradeoffs.jpg
-  tags: [co2-fixation]
-
-- id: doi:10.1038/s41564-019-0520-8
-  image: images/publications/desmarais-2019-dabs.jpg
+  title: "Functional reconstitution of a bacterial CO₂ concentrating mechanism in Escherichia coli"
   tags: [co2-fixation]
 
 # --- Environmental analysis ---
@@ -99,4 +94,17 @@
     - Elad Noor
     - Arren Bar-Even
     - Ron Milo
+  tags: [earlier]
+
+- id: doi:10.1016/j.cub.2020.01.076
+  image: images/publications/flamholz-2020-photosynthesis-geologic-time.jpg
+  tags: [earlier]
+
+- id: doi:10.1038/s41564-019-0520-8
+  image: images/publications/desmarais-2019-dabs.jpg
+  tags: [earlier]
+
+- id: doi:10.1021/acs.biochem.9b00237
+  image: images/publications/flamholz-2019-rubisco-tradeoffs.jpg
+  title: "Revisiting Trade-offs between Rubisco Kinetic Parameters"
   tags: [earlier]
