@@ -1,7 +1,7 @@
 # envmicro.rockefeller.edu
 
 Website of the **Laboratory of Environmental Microbiology** (Flamholz Lab) at The Rockefeller University.
-Built with the Greene Lab [Lab Website Template](https://github.com/greenelab/lab-website-template) v1.4.1 (Jekyll) and served as static files from Apache at <https://envmicro.rockefeller.edu>.
+Built with the Greene Lab [Lab Website Template](https://github.com/greenelab/lab-website-template) v1.4.1 (Jekyll) and served as static files from Apache at <https://envmicro.rockefeller.edu> (RU self-host server; see Deployment in MIGRATION_NOTES.md).
 
 ## Build
 
@@ -11,6 +11,8 @@ Requirements: Ruby ≥ 3.1 (3.4 recommended; on macOS `brew install ruby@3.4`) a
 scripts/build.sh            # gems + venv + citations + production build -> _site/
 scripts/check-links.sh      # html-proofer on _site/ (internal links)
 python3 -m http.server -d _site 4000   # preview at http://localhost:4000
+scripts/deploy.sh           # build + preview what would change on the web server
+scripts/deploy.sh --go      # build + upload to the web server (SSH key required)
 ```
 
 `SKIP_CITE=1 scripts/build.sh` builds offline from the committed `_data/citations.yaml`.

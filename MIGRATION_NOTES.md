@@ -145,25 +145,38 @@ If overrides are partly allowed but `Options` is not, Apache returns **500 error
 If IT prefers, the same directives can go in the `<VirtualHost>` / `<Directory>` block instead, and `.htaccess` can be removed from `_config.yaml`'s `include:` list.
 The cache and compression rules are wrapped in `<IfModule>`, so missing `mod_expires`, `mod_headers` or `mod_deflate` won't break anything.
 
-## Deployment (TBD)
+## Deployment
 
-There is no deploy script yet. The build produces a self-contained `_site/` that can be copied into any Apache docroot.
+The site is hosted on RU's self-host web server (set up by RU IT, 2026-11-17):
 
-### Questions for IT
+- **Host:** `ruselfhost-2023.rockefeller.edu`, login `flamholz_curator` (LDAP curator account; SSH/SFTP with **SSH keys only**, no password login).
+- **Docroot:** `/WWW/sites/envmicro.rockefeller.edu/htdocs/`
 
-1. **Access method.** SSH/rsync, SFTP only, Git on the server, or does IT upload files for us?
-2. **Docroot path** for envmicro.rockefeller.edu, and which user/group should own the files.
-3. **`.htaccess`.** Is `AllowOverride` enabled for the docroot, and at what level (`All`, or `FileInfo Indexes Options`)? If not, can they add the rules from `.htaccess` to the vhost?
-4. **HTTPS.** Who provisions and renews the certificate (RU wildcard, Let's Encrypt, InCommon)? Will they redirect HTTP → HTTPS and `www.` → bare domain?
-5. **Where builds run.** Can Ruby 3.x and Python run on the server, or must the site be built elsewhere and only static files copied? (Building elsewhere is simpler and recommended.)
-6. **Automation.** Will they allow a deploy key or service account (for CI), or must deploys be manual?
-7. **Policies.** Any Content-Security-Policy, analytics or accessibility requirements, and is loading fonts and scripts from external CDNs allowed?
+`scripts/deploy.sh` builds the site and mirrors `_site/` into the docroot with rsync over SSH:
 
-### Likely options
+```bash
+scripts/deploy.sh          # build, then preview the changes (dry run; nothing uploaded)
+scripts/deploy.sh --go     # build, then upload
+```
 
-**A. rsync from your machine (simplest, if SSH is available).**
-`scripts/build.sh && rsync -avz --delete _site/ user@server:/path/to/docroot/`.
-This is one command, gives full control, and needs nothing on the server. The downside is that deploys depend on your laptop and environment. (SFTP-only access works the same way with `lftp mirror -R` or a GUI client.)
+Mirroring deletes server files that are no longer in `_site/`, except `.well-known/` and `cgi-bin/`, and stops if a run would delete more than 200 files (`MAX_DELETE`). Files are uploaded world-readable (dirs 755, files 644). It needs rsync on the server; if IT doesn't provide it, upload `_site/` (including the hidden `.htaccess`) with an SFTP client instead. Before the first `--go`, run the preview and check the `*deleting` lines, in case IT left files in the docroot that should stay.
+
+### Server setup (checked 2026-11-19)
+
+- SSH key login works; the docroot is owned by `flamholz_curator` and writable, and rsync is installed (`/usr/bin/rsync`).
+- Apache 2.4 (RHEL). The site's vhost is `/etc/httpd/sites.d/envmicro.conf` with `AllowOverride All` on the docroot, so `.htaccess` works.
+- HTTPS: Let's Encrypt certificate (certbot, webroot mode on the docroot, hence `.well-known/` is protected from deletion). HSTS is on.
+
+### Still to confirm with IT
+
+1. **HTTP redirect points to the wrong domain.** The port-80 vhost has `Redirect / https://envmicro.org/`; it should be `https://envmicro.rockefeller.edu/`. Ask IT to fix it.
+2. Any Content-Security-Policy, analytics or accessibility requirements, and is loading fonts and scripts from external CDNs allowed?
+
+### Automation options (later)
+
+
+**A. rsync from your machine (current setup: `scripts/deploy.sh`).**
+One command, full control, nothing needed on the server. The downside is that deploys depend on your laptop and environment.
 
 **B. GitHub Action deploying over SSH on push to `main`.**
 Add a deploy job after `build` in `.github/workflows/build.yaml` that rsyncs `_site/` over SSH. Store an SSH deploy key for a restricted account as a repository secret, and pin the server's host key.
