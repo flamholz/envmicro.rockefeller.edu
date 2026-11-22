@@ -11,7 +11,7 @@ Content was pulled from the old pages on 2026-11-17.
 | People: PI + 5 members | `_members/*.md`, shown on `team/index.md` (`/team/`); each person also gets a page at `/members/<name>/` |
 | People: Collaborators and Friends | "Collaborators and friends" list on `/team/` (text only, no member pages) |
 | People: Alums | `_members/*.md` with `group: alum`, shown in the "Alumni" section of `/team/` |
-| Publications (22 papers, 3 sections) | DOIs in `_data/sources.yaml` → `_data/citations.yaml` (generated) → three filtered lists (recent papers, commentary, other contributions) on `publications/index.md` (`/publications/`) |
+| Publications (23 papers, 3 sections) | DOIs in `_data/sources.yaml` → `_data/citations.yaml` (generated) → three filtered lists (recent papers, commentary, other contributions) on `publications/index.md` (`/publications/`) |
 | Projects (5 items) | One heading per project in `projects/index.md` (`/projects/`), using the old page's one-line descriptions as headings, each followed by its example papers and a `TODO` comment where a paragraph can go. (An earlier version used LWT's image cards from `_data/projects.yaml`; replaced at your request on 2026-11-17 with this text-first layout.) |
 | Resources | `resources/index.md` (`/resources/`): tool cards (`_data/tools.yaml`), seminars list, video embeds |
 | Lab Photos (+ "Building the Lab" sub-gallery) | `photos/index.md` (`/photos/`) |

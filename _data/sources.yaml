@@ -56,6 +56,10 @@
 
 # --- Commentary and framing ---
 
+- id: doi:10.1038/s43017-026-00806-x
+  publisher: Nature Reviews Earth & Environment
+  tags: [commentary]
+
 - id: doi:10.1016/j.tim.2023.06.003
   image: images/publications/flamholz-2023-supply-demand.jpg
   tags: [commentary]
