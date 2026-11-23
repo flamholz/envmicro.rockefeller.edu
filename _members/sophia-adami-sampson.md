@@ -4,5 +4,5 @@ image: images/people/sophia-adami-sampson.jpg
 role: staff
 ---
 
-Sophia is an environmental scientist (Bowdoin College) interested in microbial ecology.
+Sophia is an environmental scientist who studied at Bowdoin College.
 She helps run the lab and is currently working on a project connecting microbial physiology with earth history.

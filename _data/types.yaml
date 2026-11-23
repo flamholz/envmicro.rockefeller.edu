@@ -31,6 +31,10 @@ programmer:
   icon: fa-solid fa-code
   description: Research Software Engineer
 
+friend:
+  icon: fa-solid fa-handshake
+  description: Friend of the Lab
+
 # general
 
 link:

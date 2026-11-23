@@ -20,7 +20,13 @@ Interested in joining us? See [Contact]({{ "/contact/" | relative_url }}).
 
 {% include section.html %}
 
-## Collaborators and friends
+## Friends of the lab
+
+{% include list.html data="members" component="portrait" filter="role == 'friend' && group != 'alum'" %}
+
+{% include section.html %}
+
+## Collaborators
 
 - [Akshit Goyal](https://www.icts.res.in/people/akshit-goyal), TATA Bangalore
 - [Josh Goldford](https://www.dayhofflabs.com/), Dayhoff Labs
